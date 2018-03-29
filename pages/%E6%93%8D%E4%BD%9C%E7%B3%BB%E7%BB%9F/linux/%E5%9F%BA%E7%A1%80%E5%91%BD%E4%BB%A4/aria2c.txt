@@ -1,0 +1,6 @@
+====== aria2c文件下载工具 ======
+
+
+Aria2是一个命令行下运行、多协议、多来源下载工具（HTTP/HTTPS、FTP、BitTorrent、Metalink），内建 XML-RPC 用户界面。
+
+[[http://wiki.ubuntu.org.cn/Aria2]]

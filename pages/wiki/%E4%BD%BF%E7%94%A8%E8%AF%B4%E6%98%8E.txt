@@ -1,0 +1,35 @@
+===== 创建特殊文件名目录 =====
+[[https://www.bejson.com/convert/ox2str/|字符转换]]
+
+
+
+===== 可下载的代码块 =====
+
+当您使用上面的''%%<code>%%''或''%%<file>%%''语法，您或许希望让显示的代码也可以被下载。您可以通过在语言代码后面指定一个文件名来实现：
+
+<code>
+<file php myexample.php>
+<?php echo "hello world!"; ?>
+</file>
+</code>
+
+<file php myexample.php>
+<?php echo "hello world!"; ?>
+</file>
+
+
+===== dokuwiki目录文件说明 =====
+[[https://www.dokuwiki.org/devel:dirlayout]]
+
+===== dokuwiki重建索引 =====
+
+  用法：indexer.php <选项>
+    
+    通过索引所有新页面或更改页面来更新searchindex
+    当给出-c选项时，首先清除索引。
+    
+    OPTIONS 
+        -h，--help显示此帮助并退出
+        -c， - 在更新之前清除索引
+        -q，--quiet不会产生任何输出
+

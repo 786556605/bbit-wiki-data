@@ -1,0 +1,2 @@
+两个表中的不同数据，仅显示前10行
+  select * from all_hash ,dow_hash  where all_hash.hash<>dow_hash.hash limit 10;

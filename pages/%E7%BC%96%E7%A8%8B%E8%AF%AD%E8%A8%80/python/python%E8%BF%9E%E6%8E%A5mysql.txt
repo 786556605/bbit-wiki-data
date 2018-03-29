@@ -1,0 +1,7 @@
+centos安装MySQLdb
+  yum install gcc python-devel mysql-devel zlib-devel openssl-devel
+  pip install MySQL-python
+导入模块
+  import MySQLdb
+
+[[https://www.cnblogs.com/conanwang/p/6028110.html]]

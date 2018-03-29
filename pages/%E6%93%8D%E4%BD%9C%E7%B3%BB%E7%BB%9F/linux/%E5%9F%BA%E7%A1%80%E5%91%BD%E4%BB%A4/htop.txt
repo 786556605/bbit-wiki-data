@@ -1,0 +1,6 @@
+===== centos7安装htop =====
+
+
+  yum -y install epel-release
+
+  yum -y install htop

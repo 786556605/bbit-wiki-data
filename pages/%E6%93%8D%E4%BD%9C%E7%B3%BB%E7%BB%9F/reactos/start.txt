@@ -1,0 +1,4 @@
+ReactOS
+是开源免费的Windows NT系列(含NT4.0/2000/XP/2003)克隆操作系统，保持了与Windows的系统级兼容性。
+
+[[https://baike.baidu.com/item/ReactOS/8506171?fr=aladdin]]

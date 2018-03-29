@@ -1,0 +1,44 @@
+mysql 登录 3306默认端口
+   mysql -h127.0.0.1 -uroot -p -P3306
+显示全部数据库
+  show databases;
+打印帮助
+  ?
+  help 命令
+获取服务器状态
+  \s
+切换数据库
+   use 数据库;
+显示全部表
+  show tables;
+显示表结构
+  desc 表名;
+显示当前登录用户
+  select user();
+打印当前日期
+  select now();
+打印mysql版本
+  select version(); 
+mysql 添加test用户 允许本地 IP 访问 localhost, 127.0.0.1
+  create user 'test'@'localhost' identified by '123456';
+  允许任意ip登录
+  create user 'test'@'%' identified by '123456';
+  限制ip段
+  create user 'test'@'192.168.10.%' identified by '123456';
+刷新授权
+  flush privileges;  
+显示账号信息，格式化输出\G
+   select * from mysql.user \G;
+查看用户的授权
+  show grants for 'root'@'localhtost';
+
+创建用户并授权
+  grant all privileges on 数据库名称.表 to '用户名'@'允许登录地址' identified by '密码';  
+[[https://www.cnblogs.com/xujishou/p/6306765.html]]
+
+
+
+
+
+
+
