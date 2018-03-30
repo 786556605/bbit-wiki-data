@@ -1,5 +1,12 @@
-管理员登录账户：admin  密码：admin
+===== wiki不开放注册 =====
 
+dokuwiki数据库是文本数据库已经放到GitHub上欢迎大家参与
+[[https://github.com/786556605/bbit-wiki-data]]
 
+==== 目录说明 ====
 
 [[https://www.dokuwiki.org/devel:dirlayout]]
+
+==== 如何参与提交 ====
+
+https://blog.csdn.net/qq_26787115/article/details/52133008
