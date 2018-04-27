@@ -1,0 +1,4 @@
+  rpm -Va                                        校验安装的所有软件包 可以查出修改过什么文件
+  rpm -qf /var/run/wpa_supplicant                查询文件属于哪个包
+  rpm -qpi vim-enhanced-7.4.160-2.el7.x86_64.rpm 查询rpm文件包的信息，功能创建日期官网等等
+  rpm -qpl vim-enhanced-7.4.160-2.el7.x86_64.rpm 查询安装包会在系统中安装哪些文件

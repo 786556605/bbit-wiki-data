@@ -1,0 +1,4 @@
+====== yumdownloader下载但不安装rpm包 ======
+centos7测试通过
+  yum install yum-utils
+  yumdownloader <package-name>

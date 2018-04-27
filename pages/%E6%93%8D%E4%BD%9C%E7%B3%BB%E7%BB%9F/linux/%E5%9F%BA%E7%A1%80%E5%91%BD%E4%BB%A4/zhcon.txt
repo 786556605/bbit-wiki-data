@@ -1,0 +1,55 @@
+====== zhcon  linux控制台显示输入中文 ======
+[[
+http://blog.chinaunix.net/uid-743704-id-2013790.html]]
+
+[[https://blog.csdn.net/msbbc/article/details/5993363]]
+
+  可以用Ctrl+Alt+F1切换到一个控制台，完全工作在文本模式下。
+
+　　这里对双字节支持不好，只能使用英文字符，无法显示和输入中文。
+
+　　walkerxk告诉我可以使用zhcon软件实现控制台下显示输入中文。
+
+　　以下引用一段zhcon软件的介绍：
+
+　　“zhcon是工作在Linux控制台下的高效双字节中/日/韩(CJK)虚拟终端，就像DOS环境中的UCDOS一样，为控制台(console)环境提供完整的双字节语言环境。
+下载使用前请注意：
+zhcon不适用于X Window的终端，在X Window中可以选择cxterm或rxvt作为中文终端。
+zhcon是外挂式平台，与内核汉化不同，不需要对linux的kernel打补丁。如同普通的linux软件，可以方便地直接安装zhcon，在主控制台上执行zhcon后，就可以进入中文平台，也可以随时退出返回到西文状态。
+zhcon是遵循GPL原则的自由软件，因为任何人都没有理由为使用自己的母语而付费。”
+
+
+　　下载：sudo apt-get install zhcon
+　　(源里没的话，可以去网上下载，或更新源。官网是http://zhcon.sourceforge.net）
+
+　　运行方式1：Ctrl+Alt+F1 切换到控制台---$ zhcon
+
+　　命令和目录还不能正常显示输入中文，不过可以显示中文文档和在vi中输入中文了。
+
+　　运行方式2：$ zhcon --utf8
+
+　　这样可以正常显示目录，并可以在命令中使用中文了。
+
+　　很奇怪只能使用Ctrl+space或Ctrl+2来打开或关闭智能拼音输入法，没有其它输入法。但从网上找到的资料看，它有十种左右的输入法，可以通过ctrl+alt+数字切换。
+
+　　http://www.4uplay.com/user3/2311/archives/2006/5238.shtml
+
+　　该页写了本地安装和使用zhcon的方法，和我现在用的版本同为0.2.6，指出了切换输入法快捷键不能使用的问题，并给了一个可以使用的解决方法。
+
+　　我在他指出的目录下找不到配置文件，最后在/etc/zhcon.conf找到，关于切换输入法的一部分注释
+
+#change input method here
+#the first ime is the default ime when press CTRL_SPACE
+#only the first nine imes are avaiable to zhcon
+
+　　我把五笔输入法之前的输入法用#注释掉
+
+#ime = ????ƴ??,modules/cce/cce_pinyin.so,modules/cce/dict,gb2312,unicon
+#ime = ȫƴ,,input/winpy.mb,gb2312,native
+ime = ????,,input/wb.mb,gb2312,native
+
+　　第三行是五笔输入法（wb），这样使Ctrl_Space切换的默认输入法变为五笔。
+
+　　至于全角半角切换和中西文标点切换还没有想到办法。
+
+　　有兴趣的朋友或可以试试旧版本，貌似以前的版本中快捷键可以使用。

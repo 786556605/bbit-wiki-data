@@ -1,0 +1,26 @@
+====== patch 打补丁命令 ======
+
+补丁是由diff 命令制作
+
+将上面的差异输出重定向到一个文件中，
+
+  diff -u version1.txt version2.txt > version.patch
+
+这个文件就是补丁文件，可以用patch命令将修改应用与任意文件。
+
+patch的作用则是将diff记录的结果（即补丁）应用到相应文件（夹）上。最常见的用法为：
+
+patch -pNUM <补丁文件 
+-p Num：忽略几层文件夹，随后详解； 
+-E：说明如果发现了空文件，那么就删除它； 
+-R：取消打过的补丁。
+
+为了解释 -p 参数，需要看看如下patch文件片段：
+
+--- old/modules/pcitable       Mon Sep 27 11:03:56 1999
++++ new/modules/pcitable       Tue Dec 19 20:05:41 2000
+1
+2
+如果使用参数-p0，那就表示忽略当前old文件夹开始执行patch操作；
+
+如果使用参数-p1，表示忽略第一层目录（即不管old），从 modules 文件夹开始进行patch操作。
