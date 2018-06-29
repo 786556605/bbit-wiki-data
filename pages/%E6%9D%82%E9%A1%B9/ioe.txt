@@ -1,0 +1,3 @@
+====== IOE是指IBM、Oracle、EMC ======
+
+IOE， IBM小型机、Oracle数据库和EMC存储设备

@@ -1,0 +1,6 @@
+====== Oracle RAC ======
+
+RAC是real application clusters的缩写，译为“实时应用集群”， 是Oracle新版数据库中采用的一项新技术，是高可用性的一种，也是Oracle数据库支持网格计算环境的核心技术。
+
+
+[[https://baike.baidu.com/item/Oracle%20RAC/6542374?fr=aladdin]]
