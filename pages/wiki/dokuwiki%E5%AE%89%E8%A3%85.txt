@@ -1,0 +1,21 @@
+====== dokuwiki安装 ======
+
+===== 下载doukuwiki安装程序 =====
+
+下载链接: https://pan.baidu.com/s/1XeF9KVoznKX3f2JotfNwlg 密码: 5bzs
+
+解压到任何英文目录
+===== 下载doukuwiki数据库 =====
+https://codeload.github.com/786556605/bbit-wiki-data/zip/master
+
+解压到 dokuwiki 下data目录中 替换相同目录
+
+返回doku安装目录  双击 重建索引.bat  执行完后 双击启动.bat
+
+打开浏览器 http://127.0.0.1:8080/
+
+登陆 账号：admin 密码：admin
+
+
+
+**以上是win的建议安装不能参与git提交linux 下环境搭建可以自行研究**

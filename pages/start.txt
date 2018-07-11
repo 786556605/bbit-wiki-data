@@ -1,5 +1,7 @@
 ===== wiki不开放注册 =====
 
+dokuwiki本地安装方法：[[wiki:dokuwiki安装|dokuwiki安装]]
+
 dokuwiki数据库是文本数据库已经放到GitHub上欢迎大家参与
 [[https://github.com/786556605/bbit-wiki-data]]
 

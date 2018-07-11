@@ -1,0 +1,8 @@
+====== export 用来显示和设置环境变量 ======
+
+centos7   临时修改成 英文 export LANG=en_US.UTF-8   改成中文 export LANG=zh_CN.UTF-8
+
+
+永久修改   修改/etc/locale.conf 文件 
+source /etc/locale.conf  更新
+
