@@ -1,0 +1,12 @@
+====== Ceph ======
+和 [[杂项:glusterfs|GlusterFS]] 类似
+
+Ceph是一套高性能，易扩展的，无单点的分布式文件存储系统，基于Sage A. Weil的论文开发，主要提供以下三个存储服务：
+
+
+对象存储(Object Storage)，既可以通过使用Ceph的库，利用C, C++, Java, Python, PHP代码，也可以通过Restful网关以对象的形式访问或存储数据，兼容亚马逊的S3和OpenStack的Swift。
+
+块存储(Block Storage)，作为块设备像硬盘一样直接挂载。
+
+文件系统(File System) ，如同网络文件系统一样挂载，兼容POSIX接口。
+

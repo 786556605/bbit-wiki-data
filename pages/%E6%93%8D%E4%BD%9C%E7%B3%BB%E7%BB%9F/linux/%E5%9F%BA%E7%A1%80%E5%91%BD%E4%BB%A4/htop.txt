@@ -4,3 +4,5 @@
   yum -y install epel-release
 
   yum -y install htop
+
+显示进程调用信息 选择 进程后 按s键

@@ -1,0 +1,28 @@
+====== virtualenv   python虚拟环境 ======
+
+===== 安装 =====
+
+
+  pip install virtualenv
+
+===== windows =====
+
+
+  virtualenv -p C:\Python27\python.exe E:\test2 创建2.7版本的虚拟环境
+  virtualenv -p D:\Python36\python.exe E:\test3 创建3.6版本的虚拟环境
+  
+创建后，进入相应的目录，激活这个虚拟环境 venv\Scripts\activate
+退出虚拟环境，回到全局的python解释器 deactivate
+
+===== linux =====
+
+
+  virtualenv -p python2 env 创建python2版本的虚拟环境
+  virtualenv -p python3 env 创建python3版本的虚拟环境
+创建后激活该虚拟环境 source（或.） env/bin/activate
+
+退出虚拟环境，回到全局的python解释器 deactivate
+===== 安装注意 =====
+
+使用 make && make altinstall
+

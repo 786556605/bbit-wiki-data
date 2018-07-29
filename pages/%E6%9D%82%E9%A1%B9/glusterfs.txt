@@ -1,0 +1,14 @@
+====== GlusterFS ======
+并行的文件共享系统  和EMC Isilon OneFS 类似横向扩展的NAS存储
+
+Gluster File System 是一款自由软件，主要由Z RESEARCH 公司负责开发，十几名开发者，最近非常活跃。 文档也比较齐全，不难上手。
+
+[[https://baike.baidu.com/item/GlusterFS/8422801?fr=aladdin]]
+
+[[https://china.emc.com/products-solutions/trial-software-download/isilon.htm]]
+
+[[https://www.dellemc.com/zh-cn/storage/isilon/onefs-operating-system.htm]]
+
+主要应用在集群系统中，具有很好的可扩展性。软件的结构设计良好，易于扩展和配置，通过各个模块的灵活搭配以得到针对性的解决方案。可解决以下问题：网络存储，联合存储(融合多个节点上的存储空间)，冗余备份，大文件的负载均衡(分块)。由于缺乏一些关键特性，可靠性也未经过长时间考验，还不适合应用于需要提供 24 小时不间断服务的产品环境。目前适合应用于大数据量的离线应用。 
+由于它良好的软件设计，以及由专门的公司负责开发，进展非常迅速，几个月或者一年后将会有很大的改进，非常值得期待。
+GlusterFS通过Infiniband RDMA 或者Tcp/Ip 方式将许多廉价的x86 主机，通过网络互联成一个并行的网络文件系统
