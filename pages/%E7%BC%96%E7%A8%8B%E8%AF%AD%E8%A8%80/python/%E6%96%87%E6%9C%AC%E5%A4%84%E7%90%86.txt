@@ -1,0 +1,22 @@
+====== open打开文件 ======
+
+  mmlfile=open("c:/txt/mml2.txt")
+  mmlfile=open("c:/txt/mml2.txt")
+  line = mmlfile.readline()
+  while line:
+      print line
+      line = mmlfile.readline()
+  mmlfile.close()
+  
+====== 用linecache读取文件内容 ======
+
+  import linecache
+  str = linecache.getlines("c:/txt/mml3.txt")
+str为列表形式，每一行为列表中的一个元素
+
+===== 读取文件某一行的内容 =====
+  import linecache
+  count = linecache.getline(filename,linenum)
+  
+
+          

@@ -26,3 +26,24 @@
 
 使用 make && make altinstall
 
+
+<code>
+
+版权归作者所有，任何形式转载请联系作者。
+作者：Merlin（来自豆瓣）
+来源：https://www.douban.com/note/616389950/
+
+jupyter 对接ipython，作为一个web端的notebook，便于python工作。
+
+pyenv 在创建一个新的python版本时，完全拷贝一个现成的python环境。新的python版本，可作为global
+
+virtualenv 在创建一个新的python版本时，他生成一套软链到现有的python环境，即执行环境和版本不变，也可以制定一个python解释器让他来virtual，但是他的site-packages是独立的。
+
+针对一个应用，建立一个独立的python运行环境。
+
+pyenv-virtualenv，创建一个新的python版本时，拷贝了一份执行环境，放到当前版本的/envs/venv下面。并由pyenv activate venv和pyenv deactivate
+
+virtualenvwrapper 是对virtualenv的扩展。用来管理全部的虚拟环境。mkvirtualenv创建新的虚拟环境， cpvirtualenv 拷贝虚拟环境，rmvirtualenv删除虚拟环境， workon 切换不同的虚拟环境，不同的project
+
+
+</code>

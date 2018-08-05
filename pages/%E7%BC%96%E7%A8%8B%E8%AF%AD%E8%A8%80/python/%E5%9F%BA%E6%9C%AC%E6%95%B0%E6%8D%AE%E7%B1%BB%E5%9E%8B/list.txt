@@ -1,0 +1,58 @@
+====== 访问列表中的值 ======
+
+  list = [1, 2, 3, 4, 5, 6, 7 ]
+  print list[0]
+  print list[2:5]
+ 
+列表索引从0开始
+
+结果：
+  1
+  [3,4,5]
+====== 更新列表在列表中添加数据 ======
+
+  list = []          ## 空列表
+  list.append('Google')   ## 使用 append() 添加元素
+  list.append('Runoob')
+  print list
+  
+结果：
+  ['Google', 'Runoob']
+  
+====== 获取列表元素个数 ======
+
+  len(list)
+====== 列表遍历输出 ======
+
+  for x in [1, 2, 3]: print x,
+
+====== 判断元素是否在列表中 ======
+
+  3 in [1, 2, 3]
+  if 3 in [1, 2, 3] :print '元素在列表内'
+  
+====== 列表截取 ======
+
+<code>
+>>>L = ['Google', 'Runoob', 'Taobao']
+>>> L[2]
+'Taobao'
+>>> L[-2]
+'Runoob'
+>>> L[1:]
+['Runoob', 'Taobao']
+>>>
+
+Python表达式	    结果   	           描述
+L[2]	        'Taobao'	           读取列表中第三个元素
+L[-2]          	'Runoob'	           读取列表中倒数第二个元素
+L[1:]    	['Runoob', 'Taobao']	   从第二个元素开始截取列表
+
+
+
+
+
+</code>
+
+
+[[http://www.runoob.com/python/python-lists.html]]

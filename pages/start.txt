@@ -12,3 +12,10 @@ dokuwiki数据库是文本数据库已经放到GitHub上欢迎大家参与
 ==== 如何参与提交 ====
 
 https://blog.csdn.net/qq_26787115/article/details/52133008
+
+==== 写在code标签内代码原样输出 ====
+
+
+  <code>
+       ......
+  </code>
