@@ -1,5 +1,5 @@
 ====== GlusterFS ======
-并行的文件共享系统  和EMC Isilon OneFS 类似横向扩展的NAS存储
+并行的文件共享系统  和EMC Isilon OneFS 类似横向扩展的NAS存储  类似系统 [[杂项:ceph|ceph]]
 
 Gluster File System 是一款自由软件，主要由Z RESEARCH 公司负责开发，十几名开发者，最近非常活跃。 文档也比较齐全，不难上手。
 

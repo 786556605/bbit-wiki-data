@@ -1,0 +1,7 @@
+
+设置 环境变量
+
+set devmgr_show_nonpresent_devices=1
+
+
+进入设备管理器 看隐藏设备
