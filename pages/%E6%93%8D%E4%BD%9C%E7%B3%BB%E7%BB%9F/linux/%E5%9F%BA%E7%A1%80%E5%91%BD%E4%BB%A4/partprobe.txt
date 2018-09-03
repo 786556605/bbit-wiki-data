@@ -1,0 +1,12 @@
+====== partprobe不重启刷新分区表 ======
+
+
+  partprobe /dev/sda
+  
+下面的方法没有测试过 
+  
+
+方法二：
+# hdparm -z /dev/sdX
+方法三：
+# echo 1 > /sys/block/sdc/device/rescan

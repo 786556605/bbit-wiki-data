@@ -1,0 +1,10 @@
+====== tune2fs修改硬盘uuid ======
+
+修改硬盘UUID：
+
+1、新建和改变分区的UUID
+
+  sudo uuidgen | xargs tune2fs /dev/sda5 -U
+2、将原有UUID写会到分区
+
+  tune2fs -U c1b9d5a2-f162-11cf-9ece-0020afc76f16 /dev/sda5

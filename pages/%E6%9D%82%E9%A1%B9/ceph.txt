@@ -10,3 +10,5 @@ Ceph是一套高性能，易扩展的，无单点的分布式文件存储系统�
 
 文件系统(File System) ，如同网络文件系统一样挂载，兼容POSIX接口。
 
+
+红帽官方支持 [[https://www.redhat.com/zh/technologies/storage/ceph]]

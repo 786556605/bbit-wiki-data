@@ -1,0 +1,7 @@
+====== blkid 查看硬盘uuid======
+
+  blkid /dev/sda5
+  
+lsblk同样可以查看
+
+  lsblk --fs

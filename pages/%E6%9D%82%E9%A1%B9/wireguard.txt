@@ -1,0 +1,5 @@
+====== WireGuard ======
+
+简单的vpn实现方式
+
+一种新的 VPN 实现 WireGuard 正引起越来越多人的兴趣，甚至 Linus Torvalds 在内核邮件列表里称赞说，相比 OpenVPN 和 IPSec，WireGuard 就是艺术品。系统管理员 Jim Salter 对 WireGuard 进行了一番简单评测，认为 WireGuard 代码更少，配置更简单，加密算法更强，握手更简单，连接也更快，不过缺点是 WireGuard 目前只支持 Linux，Android 和 BSD，短时间内还不会支持 Windows，而 Windows 桌面的数量远多于 Linux 和 OS X。WireGuard VPN 运行在内核，它已经准备合并到内核主线。 
