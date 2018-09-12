@@ -1,0 +1,36 @@
+====== nmcli网络配置命令 ======
+
+仅适用centos7。
+
+网络绑定链路聚合实例：
+
+创建 team0
+
+  nmcli con add type team con-name team0 ifname team0 config '{"runner":{"name":"activebackup"}}'
+
+设置ip地址 网关
+  nmcli connection modify team0 ipv4.addresses '192.168.20.254/24' ipv4.gateway '192.168.20.1'
+
+设置dns
+
+  nmcli connection modify team0 ipv4.dns "114.114.114.114"
+
+设置属性为manual
+
+  nmcli connection modify team0 ipv4.method manual
+
+添加网卡ens33 和 ens38到team0
+
+  nmcli connection add type team-slave con-name team0-port1 ifname ens33 master team0
+
+  nmcli connection add type team-slave con-name team0-port2 ifname ens38 master team0
+
+启动team0
+
+  nmcli con up team0
+
+参考一下两篇文章：
+
+https://blog.csdn.net/bobpen/article/details/53883924
+
+https://www.cnblogs.com/fatt/p/7364886.html

@@ -1,0 +1,106 @@
+====== centos7+tomcat环境简单搭建 ======
+
+教程为转载，程序版本多有更改，根据实际情况自行更改。仅为测试环，境生产环境多做测试。
+
+一、安装java环境
+
+centos7安装java环境比较简单，我是通过virtualBox安装的最小的centos7，安装完毕后设置好IP，要能够访问外网，我上一篇文章里详细讲了如何通过centos7设置IP访问外网。好了，废话不多说，直接上命令：
+
+  yum -y install java-1.8.0-openjdk java-1.8.0-openjdk-devel
+
+yum命令需要联网 该操作就是从网上下载jdk8到你的centos7并且安装到默认目录。
+
+我们在Windows系统内用eclipse开发还需要设置JAVA_HOME、CLASSPATH、PATH环境变量，同样的在centos7里面也一样，安装完毕之后，
+
+将下面的三行添加到 /etc/profile 中：
+
+  export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.121-0.b13.el7_3.x86_64
+
+  export CLASSPATH=.:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+
+  export PATH=$PATH:$JAVA_HOME/bin
+
+**//注意：因为yum源里的java版本升级JAVA_HOME会有变动根据实际情况设置。//**
+
+保存关闭后，执行：source /etc/profile #让设置立即生效。
+
+这里稍微说明一下/etc/profile文件就是centos7的环境变量配置文件。这个文件是每个用户登录时都会运行的环境变量设置，如果仅仅是修改是不会立即生效的，需要重新登录的时候才能生效，通过命令：source /etc/profile可以让刚才的设置立即生效。
+
+至此，java环境安装完毕，和windows下一样，运执行命令：java -version
+
+会出现以下信息：
+
+openjdk version "1.8.0_121"
+
+OpenJDK Runtime Environment (build 1.8.0_121-b13)
+
+OpenJDK 64-Bit Server VM (build 25.121-b13, mixed mode)
+
+说明java环境安装成功！
+
+二、安装tomcat环境
+
+总体来说这个比较简单就是下载压缩包、解压缩、运行。和Windows一样。具体步骤如下：
+
+下载linux下的Tomcat压缩包 apache-tomcat-8.5.13.tar.gz
+
+[[http://mirrors.tuna.tsinghua.edu.cn/apache/tomcat/tomcat-9/v9.0.11/bin/apache-tomcat-9.0.11.tar.gz]]
+
+放到home下（目录随意，可以自己新建一个文件夹） 解压缩
+
+执行命令：tar -zxvf apache-tomcat-8.5.13.tar.gz
+
+然后就会多了一个apache-tomcat-8.5.13的文件夹，其实这样tomcat就相当于安装成功了，是不是很简单，但是要运行它还需要一些操作。
+
+1、启动tomcat
+
+执行命令：/home/apache-tomcat-8.5.13/bin/startup.sh
+
+//**注意：启动时提示 Tomcat started. 也未必正常启动。请检查8080端口是否打开。如遇到问题可以tail -f /home/apache-tomcat-8.5.13/logs/*  监听日志查找问题**//
+
+2、开发8080端口
+
+firewall-cmd --zone=public --add-port=8080/tcp --permanent
+
+说一下这一句的意思吧，因为centos7 已经更改了防火墙策略，所以使用这种方式来打开端口
+
+--zone #作用域
+
+--add-port=8080/tcp #添加端口，格式为：端口/通讯协议
+
+--permanent #永久生效，没有此参数重启后失效
+
+重启防火墙：firewall-cmd --reload
+
+3、验证
+
+可以在Windows下通过输入虚拟机的ip地址来访问例如：192.168.1.100:8080
+
+显示了tomcat的欢迎页，说明了tomcat已经成功运行了。
+
+三、部署JavaWeb项目
+
+linux里使用的是war包来部署的，所以我们要把项目打包成war包，操作如下
+
+file-export类型选择WAR file
+
+
+之后把生成的war包复制到centos7中。
+
+tomcat部署JavaWeb项目分为下面的步骤：
+
+1、删除tomcat按照目录的ROOT文件夹下的所有文件
+
+2、把war包复制到ROOT文件下面，解压缩：jar -xvf xxxx.war;
+
+3、结束所有的java进程：ps -e|grep java|awk '{print "kill -9 "$1}'|sh
+
+4、启动tomcat：sh tomcat目录/bin/startup.sh;或者是进入到tomcat的bin目录下执行：./startup.sh
+
+5、访问：在主机电脑通过浏览器访问192.168.1.100:8080(centos的Ip和端口号)，就可以打开项目的开始页面。
+
+后续内容持续更新，如果你也在学习技术，或者你想要成为全栈工程师，可以关注一下下哈。不定期更新java、框架、centos等内容。O(∩_∩)O
+
+遇到问题可以评论噢，我会第一时间解答的。
+
+原文地址：[[https://www.cnblogs.com/xiaohu1218/p/7233162.html]]

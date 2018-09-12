@@ -1,0 +1,55 @@
+====== phabricator 代码审计工具 ======
+
+
+centos7  简易安装
+
+获取 安装脚本 [[ https://secure.phabricator.com/source/phabricator/browse/master/scripts/install]]
+
+下载 执行后 配置  apache  
+  
+  cd /etc/httpd/conf.d
+  vim v.conf
+
+输入内容
+<code>
+<VirtualHost *>
+  # Change this to the domain which points to your host.
+  ServerName phabricator.example.com
+
+  # Change this to the path where you put 'phabricator' when you checked it
+  # out from GitHub when following the Installation Guide.
+  #
+  # Make sure you include "/webroot" at the end!
+  DocumentRoot   /opt/phabricator/webroot
+
+<Directory "/opt/phabricator/webroot">
+  Require all granted
+</Directory>
+
+
+  RewriteEngine on
+  RewriteRule ^(.*)$          /index.php?__path__=$1  [B,L,QSA]
+</VirtualHost>
+</code>
+
+
+安装 mariadb
+
+  yum install mariadb-server
+
+启动maridab 
+
+  systemctl restart maridb
+
+Phabricator模板导入数据库
+
+  phabricator/ $ ./bin/storage upgrade
+  
+  
+启动 apache 
+  
+  systemctl restart httpd
+  
+关闭防火墙和selinux，网页登陆配置
+
+https://secure.phabricator.com/book/phabricator/article/configuration_guide/
