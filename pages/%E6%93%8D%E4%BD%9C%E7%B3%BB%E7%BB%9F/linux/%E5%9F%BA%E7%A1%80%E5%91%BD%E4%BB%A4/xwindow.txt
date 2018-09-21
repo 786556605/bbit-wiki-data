@@ -1,0 +1,23 @@
+====== X Window远程显示界面 ======
+
+
+windows 安装 XLaunch  xshell
+
+XLaunch默认安装，xshell 在新建会话中 设置，ssh——隧道——X11转移——转发X11连接到——X DISPLAY
+
+  
+  yum install xorg-x11-xauth  
+  
+  yum -y groupinstall "X Window System" "Fonts"                  #添加字体不然中文乱码
+  
+  编辑/etc/ssh/ssh_config添加 X11Forwrding yes
+  
+  systemctl restart sshd 
+   
+  yum install firefox
+  
+  firefox 启动浏览器
+  
+
+
+  

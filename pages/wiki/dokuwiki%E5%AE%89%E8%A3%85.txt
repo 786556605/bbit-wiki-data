@@ -18,4 +18,4 @@ https://codeload.github.com/786556605/bbit-wiki-data/zip/master
 
 
 
-**以上是win的建议安装不能参与git提交linux 下环境搭建可以自行研究**
+**以上是win的简易安装,没有配置git无法提交到github，linux下环境搭建可以自行研究**

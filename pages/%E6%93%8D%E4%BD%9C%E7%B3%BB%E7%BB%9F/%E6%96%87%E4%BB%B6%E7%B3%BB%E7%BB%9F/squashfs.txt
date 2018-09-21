@@ -1,0 +1,9 @@
+SquashFS是一套基于Linux内核使用的压缩只读文件系统。该文件系统能够压缩系统内的文档,inode以及目录，文件最大支持2^64字节。
+
+
+
+
+
+
+
+基于 SquashFS 构建 Linux 可读写文件系统   https://blog.csdn.net/akunshouyoudou/article/details/53510687

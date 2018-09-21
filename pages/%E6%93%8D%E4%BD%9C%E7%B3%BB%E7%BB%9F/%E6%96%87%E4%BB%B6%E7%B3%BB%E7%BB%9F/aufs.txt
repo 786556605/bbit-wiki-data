@@ -1,0 +1,6 @@
+====== AUFS 是一种 Union File System（联合文件系统) ======
+
+ AUFS 是一种 Union File System（联合文件系统），又叫 Another UnionFS，后来叫Alternative UnionFS，再后来叫成高大上的 Advance UnionFS。所谓 UnionFS，就是把不同物理位置的目录合并mount到同一个目录中。UnionFS的一个最主要的应用是，把一张CD/DVD和一个硬盘目录给联合 mount在一起，然后，你就可以对这个只读的CD/DVD上的文件进行修改（当然，修改的文件存于硬盘上的目录里）。
+
+
+https://www.cnblogs.com/sammyliu/p/5931383.html

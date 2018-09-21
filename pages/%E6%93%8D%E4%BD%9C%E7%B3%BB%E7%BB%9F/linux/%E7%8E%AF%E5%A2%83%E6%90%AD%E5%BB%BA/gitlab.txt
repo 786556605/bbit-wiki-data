@@ -1,0 +1,5 @@
+====== gitlab代码审计工具 ======
+
+gitlab和[[操作系统:linux:环境搭建:phabricator|phabricator]]功能类似
+
+组件较多安装脚本 内存4G Ubuntu18.04 安装成功 [[https://about.gitlab.com/installation/#ubuntu]]
