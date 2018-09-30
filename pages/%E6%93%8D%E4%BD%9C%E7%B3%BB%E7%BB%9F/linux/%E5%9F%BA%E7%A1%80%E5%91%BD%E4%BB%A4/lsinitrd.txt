@@ -1,0 +1,5 @@
+====== lsinitrd显示initramfs中的内容 ======
+
+dracut 软件包中提供的lsinitrd工具可以查看 initramfs 中的内容，而且该工具是一个脚本。所以我就把它打开看了一下
+
+https://www.linuxidc.com/Linux/2015-04/116076.htm

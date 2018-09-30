@@ -1,0 +1,3 @@
+======  pivot_root: 改变root文件系统 ======
+
+功能和 switch_root  、  chroot   类似。切换系统的根目录。

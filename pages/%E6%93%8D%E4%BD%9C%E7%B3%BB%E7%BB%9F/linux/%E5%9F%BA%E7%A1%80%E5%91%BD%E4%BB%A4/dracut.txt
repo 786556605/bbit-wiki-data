@@ -1,0 +1,5 @@
+======  dracut 创建initramfs镜像 ======
+
+dracut 用于制作initrd启动镜像文件, dracut-network会为镜像内添加nfs等网络支持.
+
+https://mirrors.edge.kernel.org/pub/linux/utils/boot/dracut/dracut.html#NetworkBoot

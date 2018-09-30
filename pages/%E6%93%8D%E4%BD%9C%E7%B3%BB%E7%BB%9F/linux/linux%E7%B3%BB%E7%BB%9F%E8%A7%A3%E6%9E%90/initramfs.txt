@@ -1,0 +1,28 @@
+====== initramfs镜像文件 ======
+
+
+Linux系统启动时使用initramfs (initram file system), initramfs可以在启动早期提供一个用户态环境借助它可以完成一些内核在启动阶段不易完成的工作。当然initramfs是可选的Linux中的内核编译选项默认开启initrd。在下面的示例情况中你可能要考虑用initramfs。
+
+https://www.imooc.com/article/42024
+
+
+===== 解压cpio格式的initramfs文件 =====
+
+解压initramfs文件需要跳过后才能解压。
+
+  /usr/lib/dracut/skipcpio ../initramfs-3.10.0-229.el7.x86_64.img | zcat | cpio -imdv
+
+http://blog.51cto.com/hanyun9988/1877195
+
+https://www.linuxidc.com/Linux/2015-04/116076.htm
+
+===== 重新打包initramfs文件 =====
+
+重新打包可以用[[操作系统:linux:基础命令:dracut|dracut]]命令重新打包
+
+https://mirrors.edge.kernel.org/pub/linux/utils/boot/dracut/dracut.html#NetworkBoot
+
+
+
+
+
