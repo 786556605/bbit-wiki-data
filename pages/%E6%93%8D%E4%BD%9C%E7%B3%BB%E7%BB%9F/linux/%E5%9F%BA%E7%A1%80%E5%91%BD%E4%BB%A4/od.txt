@@ -1,0 +1,10 @@
+====== od格式化输出文件中的数据 ======
+
+可以输出显示 二进制文件
+
+
+  fdisk -l -u /dev/{xvda,vda} # 确定系统盘设备路径
+  dd if=path_to_sys_disk bs=448 count=1 2>/dev/null | od -tx1 # 查看MBR内容
+  dd if=/dev/zero bs=448 count=1 of=path_to_sys_disk # 覆盖MBR
+  dd if=path_to_sys_disk bs=448 count=1 2>/dev/null | od -tx1 # 验证已经覆盖了MBR
+  reboot # 重启

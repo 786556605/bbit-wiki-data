@@ -1,0 +1,8 @@
+====== zimbra邮件服务器 ======
+
+
+发送邮件收不到到zimra 用户执行如下命令
+
+  zmprov mcf zimbraMtaLmtpHostLookup native
+  
+https://wiki.zimbra.com/wiki/Incoming_Mail_Problems
