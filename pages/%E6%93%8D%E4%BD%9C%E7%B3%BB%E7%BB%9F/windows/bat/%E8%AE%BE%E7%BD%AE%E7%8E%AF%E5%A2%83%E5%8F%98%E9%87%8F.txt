@@ -1,0 +1,17 @@
+<code>
+::删除JAVA_HOME
+wmic ENVIRONMENT where "name='JAVA_HOME'" delete
+ 
+::新建JAVA_HONME
+wmic ENVIRONMENT create name="JAVA_HOME",username="<system>",VariableValue="C:\Program Files\Java\jdk1.8.0_66"
+ 
+::修改Path
+wmic ENVIRONMENT where "name='Path' and username='<system>'" set VariableValue="%Path%;%%JAVA_HOME%%\bin"
+
+
+</code>
+--------------------- 
+作者：RealJt 
+来源：CSDN 
+原文：https://blog.csdn.net/juntian2008/article/details/79783598 
+版权声明：本文为博主原创文章，转载请附上博文链接！

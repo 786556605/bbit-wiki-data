@@ -58,3 +58,26 @@ fatal: unable to access 'https://github.com/***/WebCrawlers.git/': Empty reply f
 解决：只需要先commit 在 push即可
 
 [[http://www.cnblogs.com/leinuo2016/p/6547818.html]]
+
+
+====  Git使用子模块引用外部项目 ====
+
+
+
+  git submodule add https://gitcafe.com/aceking/pacman.git themes/pacman
+
+https://www.linuxidc.com/Linux/2014-12/110771.htm
+
+==== 子模块递归克隆 ====
+
+  git clone --recurse-submodules https://github.com/tensorflow/models
+  
+==== 搜索git库内的所有包含特定字符串的文件 ====
+
+  git grep foo 会自动map所有包含foo的文件
+  git grep -n foo  显示行号
+  git grep --name-only foo 只显示文件名
+  git grep -c foo 可以查看每个文件里有多个匹配内容
+  the_sliver_searcher 可以替代git grep的查找代码工具
+
+ag可以代替git grep

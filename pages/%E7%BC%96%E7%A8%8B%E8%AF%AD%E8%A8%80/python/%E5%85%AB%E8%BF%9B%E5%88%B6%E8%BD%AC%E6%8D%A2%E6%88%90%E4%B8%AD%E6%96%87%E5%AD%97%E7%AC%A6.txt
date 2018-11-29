@@ -1,0 +1,13 @@
+====== python 八进制转换成中文字符 ======
+
+  # coding=utf-8
+  import chardet
+
+  a = "\260\332\266\311\311\350\261\270\310\325\326\276\312\325\274\257\304\243\277\351"
+  fencoding = chardet.detect(a)  #这行可以判断当前字符串的格式，以便后面设置打印字符的字符编码
+  print(fencoding)
+  a = a.decode('gbk')
+  print(a)
+  
+  
+  https://blog.csdn.net/leizi191110211/article/details/80819069

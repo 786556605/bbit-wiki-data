@@ -1,0 +1,4 @@
+dmidecode可以打印硬件信息
+
+
+For the record, much of this information is available under ''/sys/devices/virtual/dmi/id'' on modern Linuces (ie, since at least 2011), and much if it- notably, not including serial numbers- is readable by regular users. To answer the original poster's question, product_name is the file that contains the system's model name.

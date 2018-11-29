@@ -6,3 +6,15 @@
   zmprov mcf zimbraMtaLmtpHostLookup native
   
 https://wiki.zimbra.com/wiki/Incoming_Mail_Problems
+
+
+
+===== Thunderbird雷鸟配置方法及日历同步 =====
+
+
+https://wiki.zimbra.com/wiki/Accessing_Zimbra_Collaboration_Server_with_Thunderbird#Viewing_your_Zimbra_Calendar_using_Lightning
+
+===== centos字符设置 =====
+
+
+https://wiki.zimbra.com/wiki/CentOS_-_UTF-8_-_unicode_start
