@@ -18,3 +18,10 @@ https://wiki.zimbra.com/wiki/Accessing_Zimbra_Collaboration_Server_with_Thunderb
 
 
 https://wiki.zimbra.com/wiki/CentOS_-_UTF-8_-_unicode_start
+
+===== 设置附件大小 =====
+
+  postconf message_size_limit                                       查看当前附件大小
+  zmprov modifyConfig zimbraMtaMaxMessageSize 1324000               设置邮箱大小为1M
+  postfix reload                                                    刷新配置
+

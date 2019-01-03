@@ -1,0 +1,25 @@
+====== LDAP：Lightweight Directory Access Protocol  轻量级目录访问协议 ======
+
+windos AD域也是LDAP协议 
+
+
+我花了一个五一终于搞懂了OpenLDAP
+
+https://segmentfault.com/a/1190000014683418   一堆人吐槽LDAP
+
+
+LDAP客户端 JXplorer    和     Apache Directory Studio
+
+https://blog.csdn.net/qq_17034717/article/details/72588794
+
+http://directory.apache.org/studio/        https://blog.csdn.net/xiaoyw71/article/details/50734985
+
+
+centos7  加入域
+
+https://linux.cn/article-8516-1.html
+
+
+
+
+

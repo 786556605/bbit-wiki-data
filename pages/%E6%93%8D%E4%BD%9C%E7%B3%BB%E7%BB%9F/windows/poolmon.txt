@@ -1,0 +1,30 @@
+====== poolmon.exe(核心内存泄漏检测工具) ======
+
+
+ Poolmon可以很好的来解决核心内存泄漏问题，下面我们就介绍一下如何使用Poolmon来检测核心内存泄漏的方法。
+
+如果你的系统是Windows 2000或Windows XP系统，要先编辑注册表使它支持启用池标记功能windows 2003/vista/win7不需要，因为默认情况下池标记处于启用状态。
+
+1.运行注册表编辑器-(开始菜单--运行---输入regedit)。
+
+2.在注册表中找到以下项：
+
+HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager
+
+3.记下 GlobalFlag 的值，或保存Session Manager项。
+
+4.双击 GlobalFlag 值，在右窗格中。
+
+5.将值更改为 0x00000400 十六进制。
+
+注意当您将添加全局标志值 0x00000400 时，它只显示最多为它添加后 0x400。一定要添加前导零的所有或某些 Poolmon 信息将不会显示在输出屏幕上。
+
+6.重新启动计算机。
+
+然后运行Poolmon.exe,显示完按P键，再按B键,使Bytes字段按大到小排序，这样可以清楚的看到Bytes比较大的tag标记（比如:SpDN）
+
+如果SpDN一直处于增长状态，那么我们可以确定SpDN存在核心内存泄漏，可以通过findstr命令来定位占用SpDN的进程和驱动文件。
+
+findstr /s /m /l "SpDN" c:\windows\system32\drivers\*.sys
+
+通过一个一个排查，最后找到核心内存泄漏检的元凶.
