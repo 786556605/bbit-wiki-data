@@ -1,0 +1,14 @@
+====== aardio快速混合编程语言 ======
+
+aardio 十余年精益求精、专注于桌面软件开发，十余年一直保持活跃更新。
+aardio 小、轻、快，轻便利索，体积仅5.9MB，aardio虽然小，但提供了大量开源的标准库、扩展库，涉及到软件开发的方方面面。
+aardio 使用类C的语法非常接近Javascript，简单灵活容易上手，并且aardio开发环境里就提供了大量范例，不少aardio用户都表示只要有一点编程基础，aardio几乎不用特别学习，看几天就会用了，仅仅是复制拼凑范例都能快速开发出不错的软件。 >> 下载 aarido 最新版本( 仅5.9MB，永久免费 ) 
+
+aardio 是一种动态语言、 但也是一种混合语言，可以罕见的、非常方便的操作静态类型，因此可以直接调用C语言、C++等等静态语言的API接口函数( 不需要像VB那样先声明API )，aardio可以支持非常多的API调用约定，例如 stdcall，cdecl，thiscall，fastcall，regparm(n) 等调用约定 aardio 都可以支持。因为 aardio奇特的语言特性，aardio的胶水能力极强，在aardio中可以非常方便的调用C语言、C++、C#、Java、Python、Javascript、Node.Js、Flash ActionScript、PHP、VBScript、NewLISP、Delphi、Go语言 ...... 甚至可以直接嵌入汇编机器码并且转换为普通的aardio函数。aardio 可直接调用、嵌入、交互的第三方编程语言数量非常多，实现这些第三方语言接口的功能模块基本都是开源的（很多只用了极少的代码）。
+
+aardio可以嵌入非常多的浏览器控件，例如系统自带的IE控件、WebKit、Electron、CEF3，HTMLayout，Sciter ...... 甚至可以直接调用系统安装的Chrome写软件界面。而且aardio与浏览器的交互极其方便，例如直接调用Javascript函数，并且在Javascript中直接回调aardio函数，不需要任何复杂的封装和中间件。aardio不仅可以方便的使用Web技术编写界面，也提供可视化开发工具，可以方便的的通过拖拉传统控件创建程序。并且aardio提供强大的plus控件（开源）可以方便的实现控件九宫格贴图、透明贴图、可以快速制作出漂亮的界面。而且aardio可以非常方便的生成独立、绿色、无依赖的软件，生成的软件极小，通常比使用其他开发工具编写的类似功能软件小几倍甚至是几十倍。
+
+aardio不仅仅可以开发桌面软件，也可以用于开发网站，aardio可以直接支持与PHP类似的HTML模板语法，提供语言级别的模板解析，一个aardio源码文件，可以放aardio源码，也可以直接放html，或者放html,aardio混合的模板代码，aardio都能完美支持。并且 aardio可以使用几句代码就可以创建一个微型嵌入式HTTP服务端（可以集成WebSocket服务端），因此aardio可以非常方便的为浏览器控件提供HTTP服务端，并且像写网站那样写桌面客户端软件。
+
+
+支持多种语言绑定，支持python绑定

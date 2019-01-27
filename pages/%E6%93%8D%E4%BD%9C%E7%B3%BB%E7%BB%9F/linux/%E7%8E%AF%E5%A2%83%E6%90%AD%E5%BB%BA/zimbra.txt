@@ -25,3 +25,13 @@ https://wiki.zimbra.com/wiki/CentOS_-_UTF-8_-_unicode_start
   zmprov modifyConfig zimbraMtaMaxMessageSize 1324000               设置邮箱大小为1M
   postfix reload                                                    刷新配置
 
+===== 开启smtp25端口 =====
+
+  zmprov ms '邮箱域名' zimbraMtaTlsAuthOnly FALSE
+
+后面不一定需要
+
+  zmprov ms `zmhostname` zimbraImapCleartextLoginEnabled TRUE
+  zmprov ms `zmhostname` zimbraPop3CleartextLoginEnabled TRUE
+  zmprov ms `zmhostname` zimbraMtaTlsAuthOnly FALSE
+
