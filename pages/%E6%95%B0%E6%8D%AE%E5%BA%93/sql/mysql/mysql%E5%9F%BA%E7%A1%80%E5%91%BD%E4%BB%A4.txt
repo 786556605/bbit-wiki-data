@@ -34,6 +34,9 @@ mysql 添加test用户 允许本地 IP 访问 localhost, 127.0.0.1
 
 创建用户并授权
   grant all privileges on 数据库名称.表 to '用户名'@'允许登录地址' identified by '密码';  
+  grant all privileges on 数据库名称.* to '用户名'@'允许登录地址' identified by '密码';  
+  
+  
 [[https://www.cnblogs.com/xujishou/p/6306765.html]]
 
 

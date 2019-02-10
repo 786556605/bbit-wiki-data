@@ -1,0 +1,70 @@
+ <code>
+
+@   执行时不显示后面命令
+2 echo 输出，回显
+3 echo off 此命令后的命令不显示
+4 echo on   开回显
+5 set   例 set var=“c:\a.txt” echo %var%
+6 choice 根据输入跳转
+7 errorlevel 变量，每个命令结束时的返回码，查看返回码 echo %errorlevel%
+8 dir 显示当前目录中文件和文件夹
+-- 8.1 dir # 显示当前目录中文件和子目录
+-- 8.2 dir /a 显示当前目录中的文件和子目录包括隐藏文件和系统文件
+9 /? 帮助
+10 cd 跳转
+11 md 创建目录
+12 rd 删除空文件夹
+12.1 rd /s/q 删除文件和文件夹 /q 安静模式
+13 del 删除指定文件，不能删除系统、隐藏、只读文件
+13.1 del /q/a/f 删除指定路径所有文件，不包括子目录
+13.2 del /q/a/f/s 删除指定路径所有文件和子目录里所有文件，不删除子目录
+14 ren 重命名
+15 cls 清屏
+16 type 显示文件内容
+17 copy 拷贝文件
+18 title 设置cmd窗口标题
+19 ver 显示系统版本
+20 label 设置卷标 label c:system将c盘重命名为system
+21 vol 显示卷标
+22 pause 暂停命令
+23 rem和：： 注释
+24 date和time 日期和时间
+25 goto 跳转命令 ：label 为跳转标签 goto label
+26 find 查找
+27 more 逐行显示
+28 tree 显示目录结构
+29 & 顺序执行多条命令，不管是否执行成功
+30 && 顺序执行多条命令，命令执行不成功后不往后执行
+31 || 顺序执行多条命令，命令执行成功后不往后执行
+32 | 管道命令，即前面的输出做后面输入
+33 > 清除后追加
+34 >> 追加
+35 <<br> 从文件中获得输入
+36 if 判断
+if "%1"=="/a" echo 第一个参数是/a
+
+
+if /i"%1" equ "/a" echo 第一个参数是/a  ，/i不区分大小写
+
+
+if exist c:'test.bat echo 存在 c:'test.bat文件
+
+
+if not exist c:'test.bat (
+echo 不存在
+)else(
+echo 存在
+)
+37 setlocal和endlocal 设置命令扩展名和延缓环境变量扩充
+38 start 批处理中调用外部程序的命令，否则等外部程序完成后才继续执行剩下的指令
+39 call 批处理中调用另一个批处理命令，否则剩下的批处理指令将不会执行
+40 choice 输入后选择
+41 choice /N /C Y /T 5 /D y>nul 延时5秒
+42 assoc和ftype 文件关联
+
+
+</code>
+--------------------- 
+
+
+https://blog.csdn.net/wangran1996/article/details/68070544

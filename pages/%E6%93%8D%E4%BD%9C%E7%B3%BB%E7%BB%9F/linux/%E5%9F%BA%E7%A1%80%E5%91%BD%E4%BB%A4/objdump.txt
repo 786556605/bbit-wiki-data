@@ -1,0 +1,3 @@
+====== Objdump 解析ELF文件或者反汇编 ======
+
+ objdump -j .interp -s <ELF可执行文件>               可以打印出ELF程序中用到的动态链接库的绝对路径

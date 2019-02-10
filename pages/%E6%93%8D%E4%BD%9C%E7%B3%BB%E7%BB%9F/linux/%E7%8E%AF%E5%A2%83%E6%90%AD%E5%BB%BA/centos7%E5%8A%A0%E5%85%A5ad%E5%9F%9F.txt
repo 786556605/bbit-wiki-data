@@ -1,0 +1,65 @@
+====== CentOS7加入win2012AD域 ======
+
+===== 1.修改计算机名，设置IP地址，dns设置为域的dns =====
+
+
+===== 2. 安装加入域时需要的安装包 =====
+
+
+   sudo yum install samba samba samba-winbind krb5-workstation
+   sudo yum install authconfig-gtk                                   图形化设置工具
+   
+===== 3.执行 authconfig-gtk  =====
+
+用户帐号数据库 ： 选择 Winbind
+
+Winbind 域 ： 你的域名
+
+安全模式 ： ADS
+
+Winbind ADS 域 ： 你的域名.com
+
+域控制器 ： 域控服务器的全域名
+
+默认Shell ： /bin/bash
+
+勾选允许离线登录
+
+其它认证选项 ： 用户首次登录创建家目录
+
+点击加入域输入管理员密码
+
+4.重启linux输入账户密码测试能否登录
+
+  Domain\domain_account
+  或
+  Domain_user@domain.com
+
+在 CentOS 系统的命令行中，你也可以使用下面的任一方式来切换到域帐号进行登录：
+
+  su - domain\domain_user
+  su - domain_user@domain.tld
+
+===== 5.要为域用户或组添加 root 权限 =====
+
+编辑etc/sudoers
+
+  YOUR_DOMAIN\\domain_username             ALL=(ALL:ALL) ALL      #For domain users
+  %YOUR_DOMAIN\\your_domain\  group            ALL=(ALL:ALL) ALL  #For domain groups
+
+5.查询域信息常用命令
+
+
+  sudo net ads info    查询域信息
+
+  sudo yum install samba-winbind-clients
+
+  wbinfo -p ### Ping 域名
+  wbinfo -t ### 检查信任关系
+  wbinfo -u ### 列出域用户帐号
+  wbinfo -g ### 列出域用户组
+  wbinfo -n domain_account ### 查看域帐号的 SID 信息
+
+
+
+原文地址 https://linux.cn/article-8516-1.html
