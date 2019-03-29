@@ -6,6 +6,5 @@ Fuel 是一个为openstack 端到端”一键部署“设计的工具，其功�
 
 Fuel 3.2基于Grizzly版本，而最新将发布的4.0版本是基于Havana版本的技术预览版，不可用作生产环境使用，同时，4.0版本仍然不包含Heat和Ceilometer组件。
 
-
 [[https://www.cnblogs.com/dongdongwq/p/5627532.html
 ]]

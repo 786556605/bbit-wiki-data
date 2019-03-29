@@ -81,3 +81,10 @@ https://www.linuxidc.com/Linux/2014-12/110771.htm
   the_sliver_searcher 可以替代git grep的查找代码工具
 
 ag可以代替git grep
+
+
+
+
+git放弃修改放弃增加的文件夹
+
+https://blog.csdn.net/ustccw/article/details/79068547

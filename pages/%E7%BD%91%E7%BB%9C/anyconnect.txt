@@ -1,0 +1,4 @@
+====== 网游加速器 思科anyconnect协议 ======
+
+经过我们外游技术团队的测试，anyconnect是PC平台上（xp、win7、win8、win10都适用）最好用的外游加速器具有速度快，稳定性超高，不断线几个优点。此外，它内置智能分流机制，只有访问国外网站时才经由
+http://blog.sina.com.cn/s/blog_1588071e20102xfy9.html
