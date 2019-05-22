@@ -1,0 +1,5 @@
+====== ubuntu下软件管理工具 ======
+
+
+  sudo apt-get --reinstall install XXXX            //重新安装某个软件
+

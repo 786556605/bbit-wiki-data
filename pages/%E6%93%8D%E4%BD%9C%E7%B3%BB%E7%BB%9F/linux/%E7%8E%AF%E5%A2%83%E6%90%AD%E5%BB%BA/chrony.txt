@@ -1,0 +1,49 @@
+====== chrony NTP时钟同步服务器 ======
+centos7默认ntpd 换成了chrony
+
+Ubuntu18.04 时钟同步服务为，systemd-timesyncd
+
+
+
+修改 /etc/chrony.conf
+
+内网中需要屏蔽 他获取外网服务器的地址
+
+  #server 0.rhel.pool.ntp.org iburst   --注释这4行，由于是内网环境，所以无法跟外部时间服务器进行时间同步。
+  #server 1.rhel.pool.ntp.org iburst
+  #server 2.rhel.pool.ntp.org iburst
+  #server 3.rhel.pool.ntp.org iburst
+  server 192.168.100.1 iburst    --添加这一行，表示与本机同步时间
+ 
+  local stratum 10    --该行取消注释
+
+  # Allow NTP client access from local network.
+  allow 192.168.100.0/24   --允许哪些服务器到这台服务器来同步时间
+修改完成后保存文件
+  systemctl restart chronyd --修改完配置文件后，重启chronyd服务
+
+
+https://www.cnblogs.com/rusking/p/7634412.html
+
+
+timedatectl 命令可以查看时间和同步状态
+
+====== RTC时间 硬件设备时间 ======
+
+  hwclock -r        显示硬件时钟时间和日期
+  hwclock -s        将系统时钟调整为与目前硬件时钟一致
+  hwclock -w        将硬件时钟调整为与目前系统时钟一致
+  
+
+====== Ubuntu18.04 设置时钟同步服务器 ======
+
+  /etc/systemd/timesyncd.conf                       timesyncd的配置文件
+  systemctl restart systemd-timesyncd               重启timesyncd服务 
+  
+ 
+
+
+
+
+
+

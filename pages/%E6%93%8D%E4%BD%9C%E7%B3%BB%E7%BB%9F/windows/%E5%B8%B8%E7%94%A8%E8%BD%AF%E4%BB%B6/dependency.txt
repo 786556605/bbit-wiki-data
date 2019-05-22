@@ -1,0 +1,15 @@
+====== Dependency Walker C++依赖的dll查找工具 ======
+
+
+Dependency Walker是一个免费的实用程序，可以扫描任何32位或64位Windows模块（exe，dll，ocx，sys等），并构建所有相关模块的分层树形图。对于找到的每个模块，它列出了该模块导出的所有函数，以及其他模块实际调用了哪些函数。另一个视图显示所需文件的最小集合，以及每个文件的详细信息，包括文件的完整路径，基本地址，版本号，机器类型，调试信息等。
+
+功能和微软的Process Explorer类似
+
+{{ :操作系统:windows:常用软件:depends22.rar |}}
+
+http://www.voidcn.com/article/p-hdusjbhc-yz.html
+
+http://www.dependencywalker.com/
+
+
+
