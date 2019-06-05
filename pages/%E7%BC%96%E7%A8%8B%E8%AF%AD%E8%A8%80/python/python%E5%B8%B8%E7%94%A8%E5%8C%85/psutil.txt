@@ -1,0 +1,13 @@
+====== psutil进程管理模块 ======
+
+  import psutil               //调入模块
+  psutil.pids()               //获取所有进程id
+  p=psutil.Process(1460)      //指定1460进程
+  p.cwd()                      //获取该进程工作目录
+  p.cmdline()                  //获取进程启动的命令行
+  p.terminate()                //结束进程
+  
+  
+https://jingyan.baidu.com/article/29697b9141789fab20de3ceb.html
+https://blog.csdn.net/bluehire/article/details/88790279
+  
