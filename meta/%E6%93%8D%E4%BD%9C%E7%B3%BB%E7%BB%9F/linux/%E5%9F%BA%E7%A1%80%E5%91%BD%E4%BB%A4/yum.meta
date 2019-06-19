@@ -1,0 +1,18 @@
+a:2:{s:7:"current";a:8:{s:4:"date";a:2:{s:7:"created";i:1532830399;s:8:"modified";i:1532830428;}s:7:"creator";s:9:"管理员";s:4:"user";s:5:"admin";s:11:"last_change";a:8:{s:4:"date";i:1532830428;s:2:"ip";s:13:"36.102.208.98";s:4:"type";s:1:"E";s:2:"id";s:35:"操作系统:linux:基础命令:yum";s:4:"user";s:5:"admin";s:3:"sum";s:0:"";s:5:"extra";s:0:"";s:10:"sizechange";i:1;}s:11:"contributor";a:1:{s:5:"admin";s:9:"管理员";}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}s:11:"description";a:1:{s:8:"abstract";s:783:"原文  <https://blog.csdn.net/linuxnews/article/details/53244315>
+
+
+
+方法1 利用 Downloadonly 插件下载 RPM 软件包及其所有依赖包
+我们可以通过 yum 命令的 Downloadonly 插件下载 RPM 软件包及其所有依赖包。
+为了安装 Downloadonly 插件，以 root 身份运行以下命令。
+
+um install yum-plugin-downloadonly
+现在，运行以下命令去下载一个 RPM 软件包。
+
+yum install --downloadonly <package-name>
+默认情况下，这个命令将会下载并把软件包保存到 /var/cache/yum/ 的 rhel-{arch}-channel/packageslocation 目录，不过，你也可以下载和保存软件包到任何位置，你可以通过 –downloaddir 选项来指定。
+
+yum install --downloadonly --downloaddir=<directory> <package-name>
+例子:
+
+yu…";}s:8:"relation";a:1:{s:10:"firstimage";s:0:"";}}s:10:"persistent";a:5:{s:4:"date";a:2:{s:7:"created";i:1532830399;s:8:"modified";i:1532830428;}s:7:"creator";s:9:"管理员";s:4:"user";s:5:"admin";s:11:"last_change";a:8:{s:4:"date";i:1532830428;s:2:"ip";s:13:"36.102.208.98";s:4:"type";s:1:"E";s:2:"id";s:35:"操作系统:linux:基础命令:yum";s:4:"user";s:5:"admin";s:3:"sum";s:0:"";s:5:"extra";s:0:"";s:10:"sizechange";i:1;}s:11:"contributor";a:1:{s:5:"admin";s:9:"管理员";}}}

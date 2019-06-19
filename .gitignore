@@ -2,9 +2,7 @@
 /cache/
 /tmp/
 /attic/
-/meta/
 /media_attic/
-/media_meta/
 /.htaccess
 /locks/
 /locks_plugin_move.lock

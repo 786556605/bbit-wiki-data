@@ -1,0 +1,15 @@
+a:2:{s:7:"current";a:7:{s:4:"date";a:2:{s:7:"created";i:1533185973;s:8:"modified";i:1533185973;}s:7:"creator";s:9:"管理员";s:4:"user";s:5:"admin";s:11:"last_change";a:8:{s:4:"date";i:1533185973;s:2:"ip";s:14:"106.121.75.130";s:4:"type";s:1:"C";s:2:"id";s:35:"编程语言:python:读写csv文件";s:4:"user";s:5:"admin";s:3:"sum";s:6:"创建";s:5:"extra";s:0:"";s:10:"sizechange";i:391;}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}s:11:"description";a:1:{s:8:"abstract";s:376:"# -*- coding:utf-8 -*-
+import csv
+
+#csv 写入
+stu1 = ['marry',26,'写入csv']
+stu2 = ['bob',23]
+
+#打开文件，追加a
+out = open('Stu.csv','ab')             #python3可能是  out = open('Stu_csv.csv','a', newline='')
+#设定写入模式
+csv_write = csv.writer(out,dialect='excel')
+#写入具体内容
+csv_write.writerow(stu1)
+csv_write.writerow(stu2)
+print ("write over")";}s:8:"relation";a:1:{s:10:"firstimage";s:0:"";}}s:10:"persistent";a:4:{s:4:"date";a:1:{s:7:"created";i:1533185973;}s:7:"creator";s:9:"管理员";s:4:"user";s:5:"admin";s:11:"last_change";a:8:{s:4:"date";i:1533185973;s:2:"ip";s:14:"106.121.75.130";s:4:"type";s:1:"C";s:2:"id";s:35:"编程语言:python:读写csv文件";s:4:"user";s:5:"admin";s:3:"sum";s:6:"创建";s:5:"extra";s:0:"";s:10:"sizechange";i:391;}}}

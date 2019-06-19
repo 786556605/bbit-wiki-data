@@ -1,0 +1,19 @@
+a:2:{s:7:"current";a:9:{s:4:"date";a:2:{s:7:"created";i:1522302287;s:8:"modified";i:1533180884;}s:4:"user";s:0:"";s:7:"creator";s:0:"";s:11:"contributor";a:1:{s:5:"admin";s:9:"管理员";}s:11:"last_change";a:8:{s:4:"date";i:1533180884;s:2:"ip";s:14:"106.121.75.130";s:4:"type";s:1:"E";s:2:"id";s:5:"start";s:4:"user";s:5:"admin";s:3:"sum";s:0:"";s:5:"extra";s:0:"";s:10:"sizechange";i:84;}s:5:"title";s:19:"wiki不开放注册";s:11:"description";a:2:{s:15:"tableofcontents";a:4:{i:0;a:4:{s:3:"hid";s:19:"wiki不开放注册";s:5:"title";s:19:"wiki不开放注册";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:1;a:4:{s:3:"hid";s:12:"目录说明";s:5:"title";s:12:"目录说明";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:2;a:4:{s:3:"hid";s:18:"如何参与提交";s:5:"title";s:18:"如何参与提交";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:3;a:4:{s:3:"hid";s:37:"写在code标签内代码原样输出";s:5:"title";s:37:"写在code标签内代码原样输出";s:4:"type";s:2:"ul";s:5:"level";i:3;}}s:8:"abstract";s:392:"wiki不开放注册
+
+dokuwiki本地安装方法：dokuwiki安装
+
+dokuwiki数据库是文本数据库已经放到GitHub上欢迎大家参与
+<https://github.com/786556605/bbit-wiki-data>
+
+目录说明
+
+<https://www.dokuwiki.org/devel:dirlayout>
+
+如何参与提交
+
+<https://blog.csdn.net/qq_26787115/article/details/52133008>
+
+写在code标签内代码原样输出
+<code>
+     ......
+</code>";}s:8:"relation";a:2:{s:10:"references";a:1:{s:19:"wiki:dokuwiki安装";b:1;}s:10:"firstimage";s:0:"";}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}}s:10:"persistent";a:5:{s:4:"date";a:2:{s:7:"created";i:1522302287;s:8:"modified";i:1533180884;}s:4:"user";s:0:"";s:7:"creator";s:0:"";s:11:"contributor";a:1:{s:5:"admin";s:9:"管理员";}s:11:"last_change";a:8:{s:4:"date";i:1533180884;s:2:"ip";s:14:"106.121.75.130";s:4:"type";s:1:"E";s:2:"id";s:5:"start";s:4:"user";s:5:"admin";s:3:"sum";s:0:"";s:5:"extra";s:0:"";s:10:"sizechange";i:84;}}}

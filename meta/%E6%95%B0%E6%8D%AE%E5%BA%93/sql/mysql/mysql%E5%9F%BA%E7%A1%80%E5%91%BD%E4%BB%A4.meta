@@ -1,0 +1,16 @@
+a:2:{s:7:"current";a:8:{s:4:"date";a:2:{s:7:"created";i:1522302287;s:8:"modified";i:1549170045;}s:4:"user";s:0:"";s:7:"creator";s:0:"";s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}s:11:"description";a:1:{s:8:"abstract";s:270:"mysql 登录 3306默认端口
+ mysql -h127.0.0.1 -uroot -p -P3306
+显示全部数据库
+show databases;
+打印帮助
+?
+help 命令
+获取服务器状态
+\s
+切换数据库
+ use 数据库;
+显示全部表
+show tables;
+显示表结构
+desc 表名;
+显示当前登录用户";}s:8:"relation";a:1:{s:10:"firstimage";s:0:"";}s:11:"contributor";a:1:{s:5:"admin";s:9:"管理员";}s:11:"last_change";a:8:{s:4:"date";i:1549170045;s:2:"ip";s:15:"218.241.251.193";s:4:"type";s:1:"E";s:2:"id";s:37:"数据库:sql:mysql:mysql基础命令";s:4:"user";s:5:"admin";s:3:"sum";s:0:"";s:5:"extra";s:0:"";s:10:"sizechange";i:112;}}s:10:"persistent";a:5:{s:4:"date";a:2:{s:7:"created";i:1522302287;s:8:"modified";i:1549170045;}s:4:"user";s:0:"";s:7:"creator";s:0:"";s:11:"contributor";a:1:{s:5:"admin";s:9:"管理员";}s:11:"last_change";a:8:{s:4:"date";i:1549170045;s:2:"ip";s:15:"218.241.251.193";s:4:"type";s:1:"E";s:2:"id";s:37:"数据库:sql:mysql:mysql基础命令";s:4:"user";s:5:"admin";s:3:"sum";s:0:"";s:5:"extra";s:0:"";s:10:"sizechange";i:112;}}}

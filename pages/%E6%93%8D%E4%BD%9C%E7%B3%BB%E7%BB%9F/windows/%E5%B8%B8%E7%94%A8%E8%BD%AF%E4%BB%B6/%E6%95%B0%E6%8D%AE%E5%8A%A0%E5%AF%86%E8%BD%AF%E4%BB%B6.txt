@@ -1,0 +1,9 @@
+====== veracrypt加密软件 ======
+
+veracrypt支持文件型加密，分区、设备加密，加密系统分区或者整个系统所在的硬盘。磁盘加密软件，硬盘加密软件
+
+
+veracrypt来源于 TrueCrypt ，veracrypt停止了开发
+
+
+CnCrypt来源于 TrueCrypt 国产加密软件

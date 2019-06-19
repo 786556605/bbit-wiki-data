@@ -1,0 +1,10 @@
+a:2:{s:7:"current";a:9:{s:4:"date";a:2:{s:7:"created";i:1531817104;s:8:"modified";i:1539068126;}s:7:"creator";s:9:"管理员";s:4:"user";s:5:"admin";s:11:"last_change";a:8:{s:4:"date";i:1539068126;s:2:"ip";s:14:"124.205.39.130";s:4:"type";s:1:"E";s:2:"id";s:30:"编程语言:python:virtualenv";s:4:"user";s:5:"admin";s:3:"sum";s:0:"";s:5:"extra";s:0:"";s:10:"sizechange";i:8;}s:11:"contributor";a:1:{s:5:"admin";s:9:"管理员";}s:5:"title";s:31:"virtualenv   python虚拟环境";s:11:"description";a:2:{s:15:"tableofcontents";a:5:{i:0;a:4:{s:3:"hid";s:29:"virtualenv_python虚拟环境";s:5:"title";s:31:"virtualenv   python虚拟环境";s:4:"type";s:2:"ul";s:5:"level";i:1;}i:1;a:4:{s:3:"hid";s:6:"安装";s:5:"title";s:6:"安装";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:2;a:4:{s:3:"hid";s:7:"windows";s:5:"title";s:7:"windows";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:3;a:4:{s:3:"hid";s:5:"linux";s:5:"title";s:5:"linux";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:4;a:4:{s:3:"hid";s:12:"安装注意";s:5:"title";s:12:"安装注意";s:4:"type";s:2:"ul";s:5:"level";i:2;}}s:8:"abstract";s:379:"virtualenv   python虚拟环境
+
+安装
+sudo -H pip install virtualenv
+windows
+virtualenv -p C:\Python27\python.exe E:\test2 创建2.7版本的虚拟环境
+virtualenv -p D:\Python36\python.exe E:\test3 创建3.6版本的虚拟环境
+
+创建后，进入相应的目录，激活这个虚拟环境 venv\Scripts\activate
+退出虚拟环境，回到全局的python解释器 deactivate";}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}s:8:"relation";a:1:{s:10:"firstimage";s:0:"";}}s:10:"persistent";a:5:{s:4:"date";a:2:{s:7:"created";i:1531817104;s:8:"modified";i:1539068126;}s:7:"creator";s:9:"管理员";s:4:"user";s:5:"admin";s:11:"last_change";a:8:{s:4:"date";i:1539068126;s:2:"ip";s:14:"124.205.39.130";s:4:"type";s:1:"E";s:2:"id";s:30:"编程语言:python:virtualenv";s:4:"user";s:5:"admin";s:3:"sum";s:0:"";s:5:"extra";s:0:"";s:10:"sizechange";i:8;}s:11:"contributor";a:1:{s:5:"admin";s:9:"管理员";}}}

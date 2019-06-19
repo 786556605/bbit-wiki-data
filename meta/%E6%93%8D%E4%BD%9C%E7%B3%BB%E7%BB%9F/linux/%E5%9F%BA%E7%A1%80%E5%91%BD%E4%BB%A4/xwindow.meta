@@ -1,0 +1,17 @@
+a:2:{s:7:"current";a:8:{s:4:"date";a:2:{s:7:"created";i:1537429410;s:8:"modified";i:1537429410;}s:7:"creator";s:9:"管理员";s:4:"user";s:5:"admin";s:11:"last_change";a:8:{s:4:"date";i:1537429410;s:2:"ip";s:14:"124.205.39.130";s:4:"type";s:1:"C";s:2:"id";s:39:"操作系统:linux:基础命令:xwindow";s:4:"user";s:5:"admin";s:3:"sum";s:6:"创建";s:5:"extra";s:0:"";s:10:"sizechange";i:482;}s:5:"title";s:26:"X Window远程显示界面";s:11:"description";a:2:{s:15:"tableofcontents";a:1:{i:0;a:4:{s:3:"hid";s:26:"x_window远程显示界面";s:5:"title";s:26:"X Window远程显示界面";s:4:"type";s:2:"ul";s:5:"level";i:1;}}s:8:"abstract";s:434:"X Window远程显示界面
+
+windows 安装 XLaunch  xshell
+
+XLaunch默认安装，xshell 在新建会话中 设置，ssh——隧道——X11转移——转发X11连接到——X DISPLAY
+
+yum install xorg-x11-xauth  
+
+yum -y groupinstall "X Window System" "Fonts"                  #添加字体不然中文乱码
+
+编辑/etc/ssh/ssh_config添加 X11Forwrding yes
+
+systemctl restart sshd 
+ 
+yum install firefox
+
+firefox 启动浏览器";}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}s:8:"relation";a:1:{s:10:"firstimage";s:0:"";}}s:10:"persistent";a:4:{s:4:"date";a:1:{s:7:"created";i:1537429410;}s:7:"creator";s:9:"管理员";s:4:"user";s:5:"admin";s:11:"last_change";a:8:{s:4:"date";i:1537429410;s:2:"ip";s:14:"124.205.39.130";s:4:"type";s:1:"C";s:2:"id";s:39:"操作系统:linux:基础命令:xwindow";s:4:"user";s:5:"admin";s:3:"sum";s:6:"创建";s:5:"extra";s:0:"";s:10:"sizechange";i:482;}}}

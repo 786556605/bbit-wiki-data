@@ -1,0 +1,3 @@
+====== MobaXterm ssh远程工具======
+
+MobaXterm可以通过ssh转发linux带ui的程序，Ubuntu 16.04安装并启用sshd即可使用。
