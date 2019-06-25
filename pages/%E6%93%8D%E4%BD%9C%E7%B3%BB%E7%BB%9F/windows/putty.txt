@@ -1,0 +1,28 @@
+======  putty linux ssh远程工具 ======
+
+支持命令行模式
+
+二、putty命令行指令简介
+    putty提供了一些命令行指令，这些命令行指令可以在：http://the.earth.li/~sgtatham/putty/0.54/htmldoc/Chapter3.html#3.7找到，这里只对几个我们需要用到的介个指令进行介绍。
+1. 在命令行启动session
+    在命令行启动session的指令为：
+    putty.exe [-ssh | -telnet | -rlogin | -raw] [user@]host
+2. 标准指令介绍
+2.1 选择协议：-ssh, -telnet, -rlogin, -raw
+    这是putty支持的4个协议，在建立session时，我们需要指定使用的协议
+2.2 -l：指定登录用户名
+2.3 -pw：指定密码（明文密码，在编写代码时得考虑这里的安全性）
+2.4 -load：加载一个已保存的session
+    在使用putty时，可以将session保存，下次连接时，无需再进行配置即可直接连接。在通过命令行创建session时，可以直接使用这个指令，如：
+    putty.exe -load "server_session" xxx@yyyy
+其中xxx为使用的用户名，yyyy为我们要连接的远程主机ip地址。
+2.5 -m：指定包含需远程执行的指令的本地文件
+    如假设我们在cmd.txt这个文件中写了我们需要在远程主机上执行的指令集合，则可以按如下方法在远程主机上执行这些指令：
+    putty.exe -ssh xxx@yyyy -m "cmd.txt"
+2.6 -i：指定SSH秘钥
+    这个参数用于指定需要使用的SSH秘钥文件，假如远程主机采用秘钥文件的方式来进行身份验证，则可以使用如下指令来建立session：
+    putty.exe -ssh xxx@yyyy -i  privatekey.ppk
+    只要将以上的”privatekey.ppk“换成你自己的文件即可。
+    
+ https://www.cnblogs.com/YatHo/p/6492830.html
+ 

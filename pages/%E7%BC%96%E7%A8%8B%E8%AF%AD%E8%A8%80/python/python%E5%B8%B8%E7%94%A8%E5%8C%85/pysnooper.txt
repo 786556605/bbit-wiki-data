@@ -1,0 +1,36 @@
+====== pysnooper python调试库 ======
+
+PySnooper让你做print的事情，但不需要麻烦地添加很多语句，你只需要添加装饰器就可以得到运行日志，包括线运行，及对应变量的值。
+
+<file python pysnoopertest.py>
+
+import pysnooper
+
+@pysnooper.snoop()
+def number_to_bits(number):
+    if number:
+        bits = []
+        while number:
+            number, remainder = divmod(number, 2)
+            bits.insert(0, remainder)
+        return bits
+    else:
+        return [0]
+
+number_to_bits(6)
+
+</file>
+
+如果不方便访问stderr，则可以重定向到文件：
+
+  @pysnooper.snoop('/my/log/file.log')
+
+查看非局部变量的值：
+
+  @pysnooper.snoop(variables=('foo.bar', 'self.whatever'))
+
+显示函数调用的snoop行：
+
+  @pysnooper.snoop（prefix ='ZZZ'）
+
+https://www.jianshu.com/p/5e9b79673f39

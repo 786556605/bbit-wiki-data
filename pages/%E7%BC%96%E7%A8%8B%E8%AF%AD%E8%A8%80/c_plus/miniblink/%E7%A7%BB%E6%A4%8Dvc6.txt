@@ -1,0 +1,114 @@
+====== 把chromium 的blink、v8、skia用vc6的crt编译并运行 ======
+
+有这个想法由来已久。原因有三个巨大的好处：
+
+1、可以无视VS2015的MD版本需要的那一堆api-xxxx-xxx的dll了。那堆玩意有几十个，恶心的要死。
+2、可以不用管manifest的问题。这东西巨恶心，有一个没设置好，就是各种加载不了。关键是本机没问题，说不定客户机器上哪里就不对了。
+3、小巧。vc6的是msvcp60.dll和mscrt.dll。这东西全系列windows都自带了，非常爽，这意味着你可以省下MT的那堆额外的size了。其实windows的
+所有dll基本都是用这个两个来运行的，等于说windows自己用的很爽，但就是没告诉你怎么用····
+
+现在的目标很清晰，就是把miniblink用到的vs2015的crt，换成vc6的crt。
+
+这个过程非常艰辛。毕竟vc6的crt和最新版的crt相差巨大，数次我都以为是不可能完成的任务，想放弃了。但又觉得不甘心，忍忍又查了下资料，最后居然又搞定了····
+真可谓是山穷水尽疑无路，柳暗花明又一村····
+
+首先是搭起环境。我们需要一套DDK的包，把里面的inc和lib目录扣出来，然后给vs2015的工程设置上。其实就是把VS2015的这个目录清空，并设置成
+DDK里的目录：
+
+{{:编程语言:c_plus:miniblink:1.png?400|}}
+
+然后就可以开始编译了。
+
+接下来就是成吨的编译错误……
+
+让我们一个个的来解决。
+先解决blink工程里的。
+
+{{:编程语言:c_plus:miniblink:2.png?400|}}
+
+
+举个栗子，上图中，blink自己写的deque，由于用到了stl的std::reverse_iterator，这玩意的模版参数居然变了，擦，
+老版本的需要传入T这个模版参数。所以 这里针对vc6的rt加了个参数。
+其实这里说起来简单，但编译过程中，抛出的错误提示都是几屏几屏的，所以看到时候的心情你懂的···
+耐着性子一个个的改正。
+
+
+然后就是更麻烦的windows相关的头文件和宏缺失。比如少了GdiAlphaBlend之类的。这个很麻烦，因为数量巨大····
+但最后我还是全部加上了。无非就是从新版头文件里把缺失的拷过来，放到个单独的头文件里，然后让所有工程都引入。
+
+如果最后link的时候找不到，那就得动态调用了。这个都是工作量问题，说起来简单，但要知道一下就缺了几十个相关的函数，而且每加一个都可能面临rebuild……
+
+然后是操蛋的__int64的问题。vc6的crt，很多stl的重载，是没有x64版本的···比如ostream& operator<<(std::ostream& os, __int64 val)这货就没有。
+最后也是我一点点的加上。
+
+blink相关的工作做完了，轮到v8了。本以为这个简单，毕竟和操作系统相关的比较少，没想到也很麻烦。
+
+v8子类化了几个stl的类，比如ZoneVector这种。但操蛋的老版本有些接口又变了，具体如图：
+
+
+{{:编程语言:c_plus:miniblink:3.png?400|}}
+
+
+{{:编程语言:c_plus:miniblink:4.png?400|}}
+
+
+无非就是适配下老版本stl的模版接口。不过编译的错误又是成吨的抛出·····心塞
+
+其他的也是些零碎的ap和宏需要补充。
+
+下面来说说skia的问题。
+其中遇到最大的麻烦是，skia用了大量的sse、xmm指令，而老crt是没有这堆玩意的！
+当时我就震惊了，因为如果要手写那堆指令的汇编的话，工作量非常巨大····
+不过就在我快绝望的时候，我发现，那堆_mm_cmpeq_ss之类的函数，只要声明了，vs2015就可以内置进去！
+原来这货是内置函数（可以搜索vs 内置函数）
+于是我把新版本的xmmintrin.h等几个头文件直接拿过来，改了下编译错误，居然就让vs给编译通过了！而且skia的都可以通过····当时我就泪流满面，差点就放弃了
+
+编译问题都解决后，剩下就是link问题了。这里也很麻烦，一link，出了几千个link错误····大部分是api找不到，这个好解决，动态一下就好。
+但有几个麻烦的地方：
+一个是_Init_thread_header、_Init_thread_footer等几个函数找不到。这玩意在网上是搜不到什么有用信息的（后来知道是内置的函数，在一些lib里面），于是我先用空函数代替。但
+这玩意的参数类型和返回值完全不知道，而且vs一旦参数不对，编译也通不过。所以只能靠猜···最后居然被我猜出来了，是vod _Init_thread_header(int*)类型的，
+当时我就又泪流满面了····
+
+剩下其他编译错误就不提了，总之都是巨大的工作量，几 千个错误要改。
+
+最后终于编译通过，但跑起来又是各种问题。还是刚才的_Init_thread_header的问题。这货居然会插在每个局部精态变量的前面，用来保证线程安全的局部静态变量的初始化。
+
+但这货还用了几个如__tls_index之类的全局变量，这个是要初始化的，但初始化的函数根本就没生成，因为初始化的函数所在的lib是vs的新版crt里的。当时搞了很久，想了个很不好的方案，就是搜索特征码，把这个__tls_index的地址拿到手，然后自己去初始化..不过幸运的是，群里有人告诉了我，这玩意是vs新版的特性，叫Static local variables are initialized in a thread-safe ，
+其实是有
+ /Zc:threadSafeInit- t
+
+这个开关可以关闭的！！
+这个真是救了我。把这个开关关闭后，果然_Init_thread_header之类的函数也不会生成了，所以也不需要我写空函数代替了··
+
+Thread-safe “magic” statics: Static local variables are initialized in a thread-safe way,
+ removing the need for manual synchronization. 
+Be aware that usage of these variables other than initialization is still not protected. 
+Thread safety can be disabled by using
+ /Zc:threadSafeInit- to avoid a dependency on the CRT. 
+
+
+最后是一些还没解决，但不影响的问题，就是有几个stl的操作符重载，一直提示link不到。比如
+basic_ostream<char, char_traits<char> > & __cdecl operator<< <char, char_traits<char>, allocator<char> >(
+    basic_ostream<char, char_traits<char> > & a, basic_string<char, char_traits<char>, allocator<char> > const & b)
+
+但我看了mscrt.dll，这个函数确实是导出的。最后不管了，写了个本地的函数代替，内部直接调用mscrt.dll。
+
+然后是一堆sse的函数找不到，比如_libm_sse2_sin_precise  _libm_sse2_pow_precise _libm_sse2_acos_precise这些。差点在这里又放弃了。
+还好找到篇文章，讲这玩意是vs的新特性，可以通过设置里代码生成的无增强指令 (/arch:IA32)来关闭对高级sse指令的编译优化。
+
+再然后是一些数学库找不到，比如nextafterf之类的。老版的crt没有。这个我从苹果的llvm里扣到具体的代码。
+见：http://opensource.apple.com//source/Libm/Libm-315/Source/ARM/
+
+最后的最后，终于成功跑起miniblink~！！！！！！！！！！！！！！！！！！！！！！！！！！
+
+
+
+https://blog.csdn.net/weolar/article/details/52456886
+
+作者看雪论坛：https://bbs.pediy.com/user-75695.htm    https://bbs.pediy.com/thread-90393.htm  weolar
+
+
+
+
+
+

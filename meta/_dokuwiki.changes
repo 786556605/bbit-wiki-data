@@ -1,13 +1,3 @@
-1554947456	124.205.39.130	E	操作系统:linux:环境搭建:iredmail	admin	[Postfix不经过dns验证] 		4
-1555381873	124.205.39.130	C	操作系统:windows:常用软件:enigmavirtualbox	admin	创建		369
-1555383502	124.205.39.130	C	操作系统:windows:常用软件:dependency	admin	创建		724
-1555407514	124.205.39.130	C	操作系统:linux:环境搭建:chrony	admin	创建		791
-1555407548	124.205.39.130	E	操作系统:linux:环境搭建:chrony	admin			34
-1555408144	124.205.39.130	E	操作系统:linux:环境搭建:iredmail	admin			-739
-1555470858	124.205.39.130	E	操作系统:linux:环境搭建:chrony	admin			577
-1556091454	124.205.39.130	C	操作系统:windows:常用软件:数据恢复软件	admin	创建		158
-1556956105	60.26.130.220	C	操作系统:linux:基础命令:ubuntu:start	admin	创建		18
-1556956206	60.26.130.202	C	操作系统:linux:基础命令:ubuntu:debsums	admin	创建		302
 1556956909	60.26.130.212	C	操作系统:linux:基础命令:ubuntu:dpkg	admin	创建		221
 1556957547	60.26.130.206	E	操作系统:linux:基础命令:ubuntu:dpkg	admin			146
 1556957735	60.26.130.212	C	操作系统:linux:基础命令:ubuntu:apt	admin	创建		121
@@ -22,3 +12,13 @@
 1560909698	218.240.145.11	E	网络:openssl:https	admin			57
 1560920591	218.240.145.11	C	杂项:闪存ce	admin	创建		1403
 1560920796	218.240.145.11	E	杂项:闪存ce	admin			47
+1561044889	120.244.121.33	C	操作系统:windows:putty	admin	创建		1739
+1561104489	218.240.145.11	C	操作系统:windows:bat:xcopy	admin	创建		461
+1561343658	218.240.145.11	C	编程语言:python:python常用包:pysnooper	admin	创建		839
+1561343894	218.240.145.11	E	编程语言:python:python常用包:pysnooper	admin			4
+1561367398	218.240.145.11	E	操作系统:windows:常用软件:数据恢复软件	admin			110
+1561431518	218.240.145.11	C	操作系统:linux:ubuntu:显卡驱动	admin	创建		229
+1561457428	218.240.145.11	C	编程语言:c_plus	admin	创建		27
+1561457957	218.240.145.11	C	编程语言:c_plus:miniblink:移植vc6	admin	创建		7308
+1521387976	127.0.0.1	E	编程语言:c:start		外部编辑		9
+1561458134	218.240.145.11	E	编程语言:c:start	admin			-2

@@ -1,0 +1,6 @@
+a:2:{s:7:"current";a:8:{s:4:"date";a:2:{s:7:"created";i:1561044889;s:8:"modified";i:1561044889;}s:7:"creator";s:9:"管理员";s:4:"user";s:5:"admin";s:11:"last_change";a:8:{s:4:"date";i:1561044889;s:2:"ip";s:14:"120.244.121.33";s:4:"type";s:1:"C";s:2:"id";s:26:"操作系统:windows:putty";s:4:"user";s:5:"admin";s:3:"sum";s:6:"创建";s:5:"extra";s:0:"";s:10:"sizechange";i:1739;}s:5:"title";s:27:"putty linux ssh远程工具";s:11:"description";a:2:{s:15:"tableofcontents";a:1:{i:0;a:4:{s:3:"hid";s:27:"putty_linux_ssh远程工具";s:5:"title";s:27:"putty linux ssh远程工具";s:4:"type";s:2:"ul";s:5:"level";i:1;}}s:8:"abstract";s:299:"putty linux ssh远程工具
+
+支持命令行模式
+
+二、putty命令行指令简介
+  putty提供了一些命令行指令，这些命令行指令可以在：http://the.earth.li/~sgtatham/putty/0.54/htmldoc/Chapter3.html#3.7找到，这里只对几个我们需要用到的介个指令进行介绍。";}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}s:8:"relation";a:1:{s:10:"firstimage";s:0:"";}}s:10:"persistent";a:4:{s:4:"date";a:1:{s:7:"created";i:1561044889;}s:7:"creator";s:9:"管理员";s:4:"user";s:5:"admin";s:11:"last_change";a:8:{s:4:"date";i:1561044889;s:2:"ip";s:14:"120.244.121.33";s:4:"type";s:1:"C";s:2:"id";s:26:"操作系统:windows:putty";s:4:"user";s:5:"admin";s:3:"sum";s:6:"创建";s:5:"extra";s:0:"";s:10:"sizechange";i:1739;}}}

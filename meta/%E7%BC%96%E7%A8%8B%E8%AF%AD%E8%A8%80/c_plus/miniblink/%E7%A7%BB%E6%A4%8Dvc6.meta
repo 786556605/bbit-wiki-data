@@ -1,0 +1,8 @@
+a:2:{s:7:"current";a:8:{s:4:"date";a:2:{s:7:"created";i:1561457957;s:8:"modified";i:1561457957;}s:7:"creator";s:9:"管理员";s:4:"user";s:5:"admin";s:11:"last_change";a:8:{s:4:"date";i:1561457957;s:2:"ip";s:14:"218.240.145.11";s:4:"type";s:1:"C";s:2:"id";s:39:"编程语言:c_plus:miniblink:移植vc6";s:4:"user";s:5:"admin";s:3:"sum";s:6:"创建";s:5:"extra";s:0:"";s:10:"sizechange";i:7308;}s:5:"title";s:59:"把chromium 的blink、v8、skia用vc6的crt编译并运行";s:11:"description";a:2:{s:15:"tableofcontents";a:1:{i:0;a:4:{s:3:"hid";s:55:"把chromium_的blink_v8_skia用vc6的crt编译并运行";s:5:"title";s:59:"把chromium 的blink、v8、skia用vc6的crt编译并运行";s:4:"type";s:2:"ul";s:5:"level";i:1;}}s:8:"abstract";s:734:"把chromium 的blink、v8、skia用vc6的crt编译并运行
+
+有这个想法由来已久。原因有三个巨大的好处：
+
+1、可以无视VS2015的MD版本需要的那一堆api-xxxx-xxx的dll了。那堆玩意有几十个，恶心的要死。
+2、可以不用管manifest的问题。这东西巨恶心，有一个没设置好，就是各种加载不了。关键是本机没问题，说不定客户机器上哪里就不对了。
+3、小巧。vc6的是msvcp60.dll和mscrt.dll。这东西全系列windows都自带了，非常爽，这意味着你可以省下MT的那堆额外的size了。其实windows的
+所有dll基本都是用这个两个来运行的，等于说windows自己用的很爽，但就是没告诉你怎么用····…";}s:8:"relation";a:2:{s:5:"media";a:4:{s:35:"编程语言:c_plus:miniblink:1.png";b:1;s:35:"编程语言:c_plus:miniblink:2.png";b:1;s:35:"编程语言:c_plus:miniblink:3.png";b:1;s:35:"编程语言:c_plus:miniblink:4.png";b:1;}s:10:"firstimage";s:35:"编程语言:c_plus:miniblink:1.png";}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}}s:10:"persistent";a:4:{s:4:"date";a:1:{s:7:"created";i:1561457957;}s:7:"creator";s:9:"管理员";s:4:"user";s:5:"admin";s:11:"last_change";a:8:{s:4:"date";i:1561457957;s:2:"ip";s:14:"218.240.145.11";s:4:"type";s:1:"C";s:2:"id";s:39:"编程语言:c_plus:miniblink:移植vc6";s:4:"user";s:5:"admin";s:3:"sum";s:6:"创建";s:5:"extra";s:0:"";s:10:"sizechange";i:7308;}}}

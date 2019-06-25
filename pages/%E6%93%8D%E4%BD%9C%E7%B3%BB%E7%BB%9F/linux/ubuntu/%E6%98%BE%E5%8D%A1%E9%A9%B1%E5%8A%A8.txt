@@ -1,0 +1,7 @@
+
+====== ubuntu18.04安装显卡驱动 ======
+
+  sudo add-apt-repository ppa:graphics-drivers
+  sudo apt-get update
+  ubuntu-drivers devices    查看显卡驱动
+  sudo ubuntu-drivers autoinstall 或者sudo apt install nvidia-340
