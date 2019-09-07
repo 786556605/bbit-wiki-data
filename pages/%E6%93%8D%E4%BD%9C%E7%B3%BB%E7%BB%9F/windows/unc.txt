@@ -1,0 +1,11 @@
+====== UNC路径 ======
+
+
+UNC为网络（主要指局域网）上资源的完整Windows 2000名称。
+1：什么是UNC路径？UNC路径就是类似\\softer这样的形式的网络路径。
+2：UNC为网络（主要指局域网）上资源的完整Windows 2000名称。
+格式：\\servername\sharename，其中servername是服务器名。sharename是共享资源的名称。
+目录或文件的UNC名称可以包括共享名称下的目录路径，格式为：\\servername\sharename\directory\filename。
+2：unc共享就是指网络硬盘的共享：
+当访问softer计算机中名为it168的共享文件夹，用UNC表示就是\\softer\it168；如果是softer计算机的默认管理共享C$则用\\softer\c$来表示。
+我们访问网上邻居所采用的命令行访问法，实际上应该称作UNC路径访问法。

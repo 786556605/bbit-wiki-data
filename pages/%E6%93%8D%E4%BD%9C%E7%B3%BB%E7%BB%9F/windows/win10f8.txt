@@ -1,0 +1,5 @@
+====== win10开机F8 ======
+
+用管理员身份执行：
+
+  bcdedit /set {default} bootmenupolicy legacy

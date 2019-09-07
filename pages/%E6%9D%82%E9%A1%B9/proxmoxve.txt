@@ -1,0 +1,5 @@
+====== Proxmox VE ======
+
+PVE Proxmox VE (Proxmox Virtual Environment) 有方便易用的WEB界面，基于JAVA的UI和内核接口，可以登录到VM客户方便的操作，还有易用的模板功能，基本跟老外的商业VPS环境差不多了，支持VT和ISCSI。
+
+设置简单，ESXI 功能拆分太多

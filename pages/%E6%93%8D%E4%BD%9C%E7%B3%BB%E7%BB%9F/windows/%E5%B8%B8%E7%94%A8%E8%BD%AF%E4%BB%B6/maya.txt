@@ -1,0 +1,8 @@
+maya静默安装
+
+
+
+Setup.exe / W / q 
+
+
+https://knowledge.autodesk.com/zh-hans/support/maya/learn-explore/caas/sfdcarticles/sfdcarticles/CHS/How-to-run-a-silent-install-of-Maya-2017-on-Windows.html

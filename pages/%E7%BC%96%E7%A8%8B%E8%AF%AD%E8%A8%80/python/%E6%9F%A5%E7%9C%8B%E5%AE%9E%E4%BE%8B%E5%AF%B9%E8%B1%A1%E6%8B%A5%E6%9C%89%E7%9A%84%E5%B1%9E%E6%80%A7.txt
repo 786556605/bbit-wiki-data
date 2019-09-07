@@ -1,0 +1,27 @@
+
+
+
+使用<code>__dict__</code>方法查看实例对象拥有的属性
+
+<code>
+class CC:
+    def __init__(self,x,y):
+        self.x = x
+        self.y = y
+    def func(self):
+        print(self.x,self.y)
+ 
+cc = CC(1,2)
+cc.func()
+print(cc.__dict__)  #实例对象
+print(CC.__dict__)  #类对象
+ 
+"""
+上面代码的输出结果为：
+{'y': 2, 'x': 1}
+{'__module__': '__main__', '__weakref__': <attribute '__weakref__' of 'CC' objects>, '__init__': <function CC.__init__ at 0x000001D7AD801400>, 'func': <function CC.func at 0x000001D7AD801488>, '__doc__': None, '__dict__': <attribute '__dict__' of 'CC' objects>}
+
+</code>
+
+
+https://blog.csdn.net/qq_39314932/article/details/80978087

@@ -7,3 +7,10 @@
   ffmpeg.exe -i 1.mp4 -ss 5 0001.mp4
   
   
+2.统一到某个帧率，中间帧数不够了去差值
+
+   ffmpeg -i input.mov -sameq -r 24 -y output.mov            //无效
+
+或者
+
+   ffmpeg -i input.mov -qscale 0 -r 24 -y output.mov
