@@ -1,0 +1,9 @@
+====== Fiddler http抓包工具 ======
+
+
+Fiddler是一个http协议调试代理工具，它能够记录并检查所有你的电脑和互联网之间的http通讯，设置断点，查看所有的“进出”Fiddler的数据（指cookie,html,js,css等文件）。 Fiddler 要比其他的网络调试器要更加简单，因为它不仅仅暴露http通讯还提供了一个用户友好的格式。 [1]
+
+
+======WSExplorer 1.3 根据进程分析抓包工具 ======
+
+{{ :操作系统:windows:常用软件:wsexplorer_1.3.rar |}}

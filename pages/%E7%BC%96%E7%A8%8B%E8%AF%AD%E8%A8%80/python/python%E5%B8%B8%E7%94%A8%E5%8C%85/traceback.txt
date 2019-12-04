@@ -1,0 +1,14 @@
+====== python traceback 追溯模块 ======
+
+traceback可以查询异常信息，也可查看调用这个函数的语句
+
+  import traceback
+  def add(x):
+  	print x
+  	print traceback.extract_stack()
+  
+  
+{{ :编程语言:python:python常用包:traceback.rar |}}
+  
+  
+

@@ -1,0 +1,43 @@
+====== callgraph生成C的函数调用关系图 ======
+
+
+1. 安装 Callgraph
+Callgraph 实际由三个工具组合而成。
+一个是用于生成 C 函数调用树的 cflow 或者 calltree，下文主要介绍 cflow。
+一个处理 dot 文本图形语言的工具，由 graphviz 提升。
+一个用于把 C 函数调用树转换为 dot 格式的脚本：tree2dotx
+
+https://blog.csdn.net/u012247418/article/details/80218246
+
+
+
+====== Graphviz ======
+
+
+Graphviz (Graph Visualization Software) 是一个由AT&T实验室启动的开源工具包。DOT是一种图形描述语言，非常简单的，
+
+Graphviz就是用来处理这种语言的工具。只需要简单了解一下DOT语言，就可以用Graphviz绘图了，它对程序员特别有用。
+
+So in short, if you are a programmer, it is born for you。
+
+
+
+
+====== CodeViz  分析C++的函数图 ======
+
+CodeViz是《Understanding The Linux Virtual Memory Manager》的作者 Mel Gorman 写的一款分析C/C++源代码中函数调用关系的open source工具（类似的open source软件有 egypt、ncc）。其基本原理是给 GCC 打个补丁（如果你的gcc版本不符合它的要求还得先下载正确的gcc版本），让它在编译每个源文件时 dump 出其中函数的 call graph，然后用 Perl 脚本收集并整理调用关系，转交给Graphviz绘制图形（Graphviz属于后端，CodeViz属于前端）。
+
+CodeViz 原本是作者用来分析 Linux virtual memory 的源码时写的一个小工具，现在已经基本支持 C++ 语言，最新的 1.0.9 版能在 Windows + Cygwin 下顺利地编译使用。
+
+https://blog.csdn.net/touatou/article/details/79680781
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,24 @@
+====== 系统级性能分析工具perf ======
+
+perf可以用于分析程序及系统的性能瓶颈
+
+
+
+perf list查看当前系统支持的性能事件；
+
+perf bench对系统性能进行摸底；
+
+perf test对系统进行健全性测试；
+
+perf stat对全局性能进行统计；
+
+
+perf stat
+
+perf stat用于运行指令，并分析其统计结果。虽然perf top也可以指定pid，但是必须先启动应用才能查看信息。
+
+perf stat能完整统计应用整个生命周期的信息。
+
+https://www.cnblogs.com/arnoldlu/p/6241297.html
+
+

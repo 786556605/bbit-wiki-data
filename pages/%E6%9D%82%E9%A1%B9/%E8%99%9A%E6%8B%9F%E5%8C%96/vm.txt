@@ -1,0 +1,71 @@
+====== 命令行模式管理VMWare虚拟机 ======
+
+工作中使用到在CentOS中安装VMWare Workstation部署虚拟机，以前都是使用图形界面启动虚拟机，由此要调整VNC的分辨率大小，重启VNC Server后所有虚拟机都关闭了。事后分析可能是图形化启动虚拟机是运行在level 5中，重启VNC Server相当于注销了运行vmware Workstation的这个会话，自然所有虚拟机就都被关闭了。
+
+为了避免再出现这种问题，感觉通过命令行模式在level 3中启动虚拟机。
+
+基本命令：
+
+# vmrun -T ws start "/opt/VMware/win2k8r2.vmx" nogui启动无图形界面虚拟机  （-T 是区分宿主机的类型，ws|server|server1|fusion|esx|vc|player，可能比较常用的是ws、esx和player，不过我没有加-T在Workstation也能正常运行,
+
+ 可能esx和server就需要了）
+
+# vmrun start "/opt/VMware/win2k8r2.vmx" gui启动带图形界面虚拟机
+
+# vmrun stop "/opt/VMware/win2k8r2.vmx"hard | soft强制关闭虚拟机(相当于直接关电源) | 正常关闭虚拟机
+
+# vmrun reset "/opt/VMware/win2k8r2.vmx" hard | soft冷重启虚拟机 | 热重启虚拟机
+
+# vmrun suspend  "/opt/VMware/win2k8r2.vmx" hard | soft挂起虚拟机（可能相当于休眠）
+
+#  vmrun pause  "/opt/VMware/win2k8r2.vmx"暂停虚拟机
+
+#  vmrun unpause  "/opt/VMware/win2k8r2.vmx"停止暂停虚拟机
+
+# vmrun list 列出正在运行的虚拟机
+
+# ps aux | grep vmx 另一种查看正在运行虚拟机的方法
+
+# vmrun -T ws snapshot "/opt/VMware/win2k8r2.vmx" snapshotName创建一个快照
+
+# vmrun -T ws reverToSnapshot
+
+"/opt/VMware/win2k8r2.vmx" snapshotName 从一个快照中恢复虚拟机
+
+# vmrun -T ws listSnapshots "/opt/VMware/win2k8r2.vmx"列出虚拟机快照数量及名称
+
+# vmrun -T ws deleteSnapshot
+
+"/opt/VMware/win2k8r2.vmx" snapshotName 删除一个快照
+
+创建快照时最好停止虚拟机再创建，听说这样创建的快照比运行虚拟机时要小很多，未验证。
+
+当然命令还有很多，具体可以通过vmrun --help自行查询，Linux和windows的命令格式是一样的。   
+
+
+
+在运行 vmware 命令时，您可以指定特定的选项。
+
+vmware 命令选项
+选项	说明
+-n	打开一个新的 Workstation Pro 窗口。
+-t	在现有 Workstation Pro 窗口的新选项卡中打开虚拟机。
+-x	在 Workstation Pro 启动时开启虚拟机。该选项等同于在 Workstation Pro 工具栏中单击开机。
+-X	开启虚拟机并将 Workstation Pro 窗口切换到全屏模式。
+-q	在虚拟机关机时关闭虚拟机选项卡。如果没有其他打开的虚拟机，还会退出 Workstation Pro。如果客户机操作系统能够关闭虚拟机，该选项将非常有用。
+-s	将指定变量设置为指定的值。您可以通过命令行指定任何在配置文件中有效的变量名称和值。
+-v	显示产品名、版本和内部版本号。
+虚拟机路径.vmx	使用指定的虚拟机配置 (.vmx) 文件启动虚拟机。
+在 Linux 主机上，您可以将 X 工具包选项（如 --display 和 --geometry）作为参数传递。像 Workstation Pro 窗口大小和标题之类的选项无法覆盖。
+
+
+
+
+https://docs.vmware.com/cn/VMware-Workstation-Pro/12.0/com.vmware.ws.using.doc/GUID-7369457F-FE1D-40FE-97B6-B29CA4916CCD.html
+
+
+
+
+https://www.linuxidc.com/Linux/2019-01/156358.htm
+
+
