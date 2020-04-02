@@ -1,3 +1,4 @@
+
 ===== wiki不开放注册 =====
 
 dokuwiki本地安装方法：[[wiki:dokuwiki安装|dokuwiki安装]]

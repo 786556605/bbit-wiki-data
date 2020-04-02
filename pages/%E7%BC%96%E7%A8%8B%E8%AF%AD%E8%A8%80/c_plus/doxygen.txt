@@ -1,0 +1,32 @@
+====== Doxygen生成文档 ======
+ 
+Doxygen是一种开源跨平台的，以类似JavaDoc风格描述的文档系统，完全支持C、C++、Java、Objective-C和IDL语言，部分支持PHP、C#。注释的语法与Qt-Doc、KDoc和JavaDoc兼容。Doxygen可以从一套归档源文件开始，生成HTML格式的在线类浏览器，或离线的LATEX、RTF参考手册。
+
+
+
+使用Doxygen从UE代码生成文档
+最近使用doxygen从UnrealEngine源码生成了Runtime/Engine模块文档，导出的chm都700M了(主要是各种grahp大)，好大。
+注意，使用doxygen从UE源码生成文档之前，记得删除源码中所有的.h/.hpp中的UE的宏(我自己写了个简单的程序来处理这个事情)，不然生成出来的会有问题(比如函数名不见了，显示出来的时UFUNCTION，或者成员变量不见了，显示出来的是UPROPERTY)。主要删除以下这几个MACRO就可以。
+
+"UFUNCTION",
+"DEPRECATED",
+"UCLASS",
+"UINTERFACE",
+"UPROPERTY",
+"GENERATED_BODY()",
+"GENERATED_UCLASS_BODY()",
+"GENERATED_INTERFACE_BODY()"
+使用sed就是如下的命令：
+
+# 删除源文件中的宏并保存
+$ sed -i -e /UFUNCTION/d -e /DEPRECATED/d -e /UCLASS/d -e /UINTERFACE/d -e /UPROPERTY/d -e /GENERATED_BODY/d -e /GENERATED_UCLASS_BODY/d -e /GENERATED_INTERFACE_BODY/d ${filename}
+# Example Actor.h
+$ sed -i -e /UFUNCTION/d -e /DEPRECATED/d -e /UCLASS/d -e /UINTERFACE/d -e /UPROPERTY/d -e /GENERATED_BODY/d -e /GENERATED_UCLASS_BODY/d -e /GENERATED_INTERFACE_BODY/d Actor.h
+UnrealVersionSelector的参数
+
+
+
+https://imzlp.me/posts/12143/
+
+
+
