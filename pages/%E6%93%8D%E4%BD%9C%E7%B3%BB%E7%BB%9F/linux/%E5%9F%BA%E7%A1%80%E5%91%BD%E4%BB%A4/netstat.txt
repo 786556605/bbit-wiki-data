@@ -1,0 +1,5 @@
+====== netstat查看网络端口占用 ======
+
+
+
+  netstat -tunlpcd
